@@ -1,0 +1,982 @@
+{
+ "grammar": [
+  {
+   "q": "Tony ____ to the party three days ago.",
+   "o": [
+    "was invited",
+    "was inviting",
+    "invited",
+    "invites"
+   ],
+   "a": 0,
+   "src": "段考卷第7回",
+   "tip": "Tony 是被邀請，過去時間 → was invited"
+  },
+  {
+   "q": "The flowers ____ to a wrong address, so Mary didn't get them.",
+   "o": [
+    "sent",
+    "were sent",
+    "have sent",
+    "send"
+   ],
+   "a": 1,
+   "src": "段考卷第7回",
+   "tip": "花是被寄送，過去 → were sent"
+  },
+  {
+   "q": "Jo ____ to clean the house twice a week. She cleans it every Monday and Friday.",
+   "o": [
+    "paid",
+    "has paid",
+    "is paid",
+    "pays"
+   ],
+   "a": 2,
+   "src": "段考卷第7回",
+   "tip": "Jo 被付錢請去打掃，現在習慣 → is paid"
+  },
+  {
+   "q": "The knife ____ to cut meat. The cook uses it every day.",
+   "o": [
+    "used",
+    "has used",
+    "uses",
+    "is used"
+   ],
+   "a": 3,
+   "src": "段考卷第7回",
+   "tip": "刀子被用來切肉 → be used to + V"
+  },
+  {
+   "q": "The work must ____ by today, so we have to work overtime.",
+   "o": [
+    "be done",
+    "does",
+    "be doing",
+    "do"
+   ],
+   "a": 0,
+   "src": "段考卷第7回",
+   "tip": "助動詞被動：must + be + p.p."
+  },
+  {
+   "q": "The picture was taken ____ a famous actress herself.",
+   "o": [
+    "of",
+    "by",
+    "to",
+    "at"
+   ],
+   "a": 1,
+   "src": "段考卷第7回",
+   "tip": "被動語態的動作者用 by"
+  },
+  {
+   "q": "The question ____ many times.",
+   "o": [
+    "has asked",
+    "asks",
+    "has been asked",
+    "was asking"
+   ],
+   "a": 2,
+   "src": "段考卷第7回",
+   "tip": "完成式被動：have/has been + p.p."
+  },
+  {
+   "q": "You seldom spend money on clothes, ____?",
+   "o": [
+    "don't you",
+    "aren't you",
+    "are you",
+    "do you"
+   ],
+   "a": 3,
+   "src": "段考卷第7回",
+   "tip": "seldom 為否定詞 → 附加問句用肯定 do you"
+  },
+  {
+   "q": "We have to get home before ten, ____?",
+   "o": [
+    "don't we",
+    "do we",
+    "haven't we",
+    "have we"
+   ],
+   "a": 0,
+   "src": "段考卷第7回",
+   "tip": "have to 是一般動詞 → don't we"
+  },
+  {
+   "q": "There is nothing wrong, ____?",
+   "o": [
+    "isn't it",
+    "is there",
+    "is it",
+    "isn't there"
+   ],
+   "a": 1,
+   "src": "段考卷第7回",
+   "tip": "nothing 為否定 → is there"
+  },
+  {
+   "q": "She was sleeping when you got home, ____?",
+   "o": [
+    "didn't you",
+    "did you",
+    "wasn't she",
+    "was she"
+   ],
+   "a": 2,
+   "src": "段考卷第7回",
+   "tip": "依主要子句 She was → wasn't she"
+  },
+  {
+   "q": "Frank could hardly make a living, ____?",
+   "o": [
+    "couldn't he",
+    "didn't he",
+    "did he",
+    "could he"
+   ],
+   "a": 3,
+   "src": "段考卷第7回",
+   "tip": "hardly 為否定詞 → could he"
+  },
+  {
+   "q": "The fan ____ broken yesterday. Luckily, Jacky fixed it this morning.",
+   "o": [
+    "was",
+    "is",
+    "has been",
+    "will be"
+   ],
+   "a": 0,
+   "src": "段考卷第8回",
+   "tip": "yesterday 過去被動 → was broken"
+  },
+  {
+   "q": "The ice cream should ____ in the fridge right away, or it will melt.",
+   "o": [
+    "put",
+    "be put",
+    "to put",
+    "been put"
+   ],
+   "a": 1,
+   "src": "段考卷第8回",
+   "tip": "should + be + p.p.（put 三態同形）"
+  },
+  {
+   "q": "The cake ____ by Lisa tomorrow evening.",
+   "o": [
+    "is made",
+    "is going to make",
+    "will be made",
+    "is being made"
+   ],
+   "a": 2,
+   "src": "段考卷第8回",
+   "tip": "未來被動：will be + p.p."
+  },
+  {
+   "q": "This joke ____ by Michael many times at the party yesterday, but we still laughed out loud.",
+   "o": [
+    "is told",
+    "has told",
+    "tells",
+    "was told"
+   ],
+   "a": 3,
+   "src": "段考卷第8回",
+   "tip": "yesterday + by → 過去被動 was told"
+  },
+  {
+   "q": "The meeting ____ at 2 p.m. and lasted for three hours.",
+   "o": [
+    "started",
+    "has been started",
+    "has started",
+    "starts"
+   ],
+   "a": 0,
+   "src": "段考卷第8回",
+   "tip": "與 lasted 對等，過去式主動 started"
+  },
+  {
+   "q": "Gary ____ me this book last week, and I will give it to my sister this weekend.",
+   "o": [
+    "was sent",
+    "sent",
+    "has sent",
+    "is sent"
+   ],
+   "a": 1,
+   "src": "段考卷第8回",
+   "tip": "Gary 主動寄書，last week → sent"
+  },
+  {
+   "q": "Bill was sick yesterday. He didn't come to school, ____?",
+   "o": [
+    "was he",
+    "wasn't he",
+    "did he",
+    "didn't he"
+   ],
+   "a": 2,
+   "src": "段考卷第8回",
+   "tip": "否定 didn't → 附加問句 did he"
+  },
+  {
+   "q": "Jane ____ the news this morning. She felt surprised and angry.",
+   "o": [
+    "is telling",
+    "will tell",
+    "has told",
+    "was told"
+   ],
+   "a": 3,
+   "src": "段考卷第8回",
+   "tip": "Jane 被告知消息 → was told"
+  },
+  {
+   "q": "A: Jennifer doesn't eat meat, does she?\nB: ____, she ____. She's a vegetarian.",
+   "o": [
+    "No; doesn't",
+    "Yes; doesn't",
+    "Yes; does",
+    "No; does"
+   ],
+   "a": 0,
+   "src": "段考卷第8回",
+   "tip": "她不吃肉 → No, she doesn't."
+  },
+  {
+   "q": "A: Aaron and Stacy are shy, ____?\nB: Not really. They ____ not to talk to strangers.",
+   "o": [
+    "are they; told",
+    "aren't they; were told",
+    "are they; were told",
+    "aren't they; told"
+   ],
+   "a": 1,
+   "src": "段考卷第8回",
+   "tip": "肯定句配 aren't they；被告知 were told"
+  },
+  {
+   "q": "A: You don't have to worry about your kids, ____?\nB: No, I don't. They are good kids.",
+   "o": [
+    "don't you",
+    "haven't you",
+    "do you",
+    "have you"
+   ],
+   "a": 2,
+   "src": "段考卷第8回",
+   "tip": "don't have to 否定 → do you"
+  },
+  {
+   "q": "A: The product ____ at every supermarket in Taiwan soon.\nB: That's great.",
+   "o": [
+    "sells",
+    "was sold",
+    "has been sold",
+    "will be sold"
+   ],
+   "a": 3,
+   "src": "段考卷第8回",
+   "tip": "soon 未來 + 商品被賣 → will be sold"
+  },
+  {
+   "q": "His grandmother gave Ted a red scarf on his last birthday, and it ____ by hand.",
+   "o": [
+    "was made",
+    "was making",
+    "will give",
+    "has given"
+   ],
+   "a": 0,
+   "src": "段考卷第8回",
+   "tip": "圍巾是被手工製作 → was made"
+  },
+  {
+   "q": "Ted looked for his scarf, but it couldn't ____ anywhere.",
+   "o": [
+    "find",
+    "be found",
+    "found",
+    "to find"
+   ],
+   "a": 1,
+   "src": "段考卷第8回",
+   "tip": "圍巾被找到 → couldn't be found"
+  },
+  {
+   "q": "We have to fix the wall, ____ we?",
+   "o": [
+    "do",
+    "have",
+    "don't",
+    "haven't"
+   ],
+   "a": 2,
+   "src": "段考卷第11回",
+   "tip": "have to 為一般動詞 → don't we"
+  },
+  {
+   "q": "The strawberries ____ by the farmers tomorrow morning.",
+   "o": [
+    "are collected",
+    "are collecting",
+    "are going to collect",
+    "will be collected"
+   ],
+   "a": 3,
+   "src": "段考卷第11回",
+   "tip": "未來被動 → will be collected"
+  },
+  {
+   "q": "I didn't call you because the phone ____ at that time.",
+   "o": [
+    "was being used",
+    "used",
+    "has used",
+    "was using"
+   ],
+   "a": 0,
+   "src": "段考卷第11回",
+   "tip": "當時電話正被使用 → was being used"
+  },
+  {
+   "q": "A lot of rare animals can ____ in this national park.",
+   "o": [
+    "see",
+    "be seen",
+    "have seen",
+    "be seeing"
+   ],
+   "a": 1,
+   "src": "段考卷第11回",
+   "tip": "動物被看見 → can be seen"
+  },
+  {
+   "q": "Jane ____ she could never be a singer, but she made it.",
+   "o": [
+    "told that",
+    "was told what",
+    "was told that",
+    "told what"
+   ],
+   "a": 2,
+   "src": "段考卷第11回",
+   "tip": "Jane 被告知 + that 子句（句意完整）"
+  },
+  {
+   "q": "The delicious cookies ____ by Aunt Stella.",
+   "o": [
+    "made",
+    "be made",
+    "making",
+    "were made"
+   ],
+   "a": 3,
+   "src": "段考卷第11回",
+   "tip": "餅乾被做 → were made"
+  },
+  {
+   "q": "A: Tiffany won't come to the party tonight, ____?\nB: No. She has to do a report today.",
+   "o": [
+    "will she",
+    "is she",
+    "won't she",
+    "isn't she"
+   ],
+   "a": 0,
+   "src": "段考卷第12回",
+   "tip": "won't 否定 → will she"
+  },
+  {
+   "q": "The floor has to ____ every morning.",
+   "o": [
+    "is mopping",
+    "be mopped",
+    "mop",
+    "is mopped"
+   ],
+   "a": 1,
+   "src": "段考卷第12回",
+   "tip": "has to + be + p.p."
+  },
+  {
+   "q": "A: Sam has never tried an apple pie before, ____?\nB: No, never.",
+   "o": [
+    "isn't he",
+    "hasn't he",
+    "has he",
+    "is he"
+   ],
+   "a": 2,
+   "src": "段考卷第12回",
+   "tip": "never 否定 + 完成式 → has he"
+  },
+  {
+   "q": "Grace is a great writer. Her new book is sure to ____ by a lot of people.",
+   "o": [
+    "love",
+    "loved",
+    "loving",
+    "be loved"
+   ],
+   "a": 3,
+   "src": "段考卷第12回",
+   "tip": "be sure to + be p.p.（書被喜愛）"
+  },
+  {
+   "q": "The bad guy ____ yet. Be careful when you go out at night.",
+   "o": [
+    "hasn't been caught",
+    "isn't catching",
+    "hasn't caught",
+    "wasn't catching"
+   ],
+   "a": 0,
+   "src": "段考卷第12回",
+   "tip": "壞人尚未被抓 → hasn't been caught"
+  },
+  {
+   "q": "A: Your mother has never been to London, ____?\nB: No, but she wants to take a trip there.",
+   "o": [
+    "hasn't she",
+    "has she",
+    "doesn't she",
+    "does she"
+   ],
+   "a": 1,
+   "src": "主題式測驗卷",
+   "tip": "never 否定 → 肯定附加問句 has she"
+  },
+  {
+   "q": "This report ____ before next Friday because my teacher doesn't accept late homework.",
+   "o": [
+    "must finish",
+    "must finished",
+    "must be finished",
+    "must be finish"
+   ],
+   "a": 2,
+   "src": "主題式測驗卷",
+   "tip": "報告被完成 → must be finished"
+  },
+  {
+   "q": "A: The old lady was ____ a strange man yesterday.\nB: That was terrible! Did the police catch the man?",
+   "o": [
+    "kill",
+    "killed",
+    "killed with",
+    "killed by"
+   ],
+   "a": 3,
+   "src": "主題式測驗卷",
+   "tip": "被某人殺 → was killed by + 人"
+  },
+  {
+   "q": "KK Junior High School is an old school. It ____ built over 100 years ago.",
+   "o": [
+    "was",
+    "is",
+    "has",
+    "has been"
+   ],
+   "a": 0,
+   "src": "主題式測驗卷",
+   "tip": "ago 過去式被動 → was built"
+  },
+  {
+   "q": "A: The actor is terrible, ____?\nB: No, he's not. It is the story of the movie. It's terrible.",
+   "o": [
+    "was he",
+    "isn't he",
+    "wasn't he",
+    "is he"
+   ],
+   "a": 1,
+   "src": "主題式測驗卷",
+   "tip": "肯定 is → isn't he"
+  },
+  {
+   "q": "A: You have an English class today, ____?\nB: Yes. It will begin at two this afternoon.",
+   "o": [
+    "isn't it",
+    "hasn't it",
+    "don't you",
+    "haven't you"
+   ],
+   "a": 2,
+   "src": "主題式測驗卷",
+   "tip": "have 當「有」為一般動詞 → don't you"
+  },
+  {
+   "q": "A: You haven't been to the new theater, ____?\nB: No, but I will go there with Bill tomorrow.",
+   "o": [
+    "do you",
+    "did you",
+    "will you",
+    "have you"
+   ],
+   "a": 3,
+   "src": "主題式測驗卷",
+   "tip": "haven't 否定 → have you"
+  },
+  {
+   "q": "A: When will the car ____?\nB: In an hour.",
+   "o": [
+    "be fixed",
+    "fix",
+    "fixed",
+    "be fixing"
+   ],
+   "a": 0,
+   "src": "主題式測驗卷",
+   "tip": "車被修 → will + be fixed"
+  },
+  {
+   "q": "The park ____ beautiful flowers in spring. You should come and see them.",
+   "o": [
+    "filled with",
+    "is filled with",
+    "filled by",
+    "is filled by"
+   ],
+   "a": 1,
+   "src": "主題式測驗卷",
+   "tip": "be filled with 充滿…"
+  },
+  {
+   "q": "Most of Jimmy's paintings ____ when he was young.",
+   "o": [
+    "have sold",
+    "have been sold",
+    "were sold",
+    "would be sold"
+   ],
+   "a": 2,
+   "src": "主題式測驗卷",
+   "tip": "畫被賣，過去 → were sold"
+  },
+  {
+   "q": "Don't use that knife to cut bread. It ____ cut meat.",
+   "o": [
+    "used to",
+    "uses to",
+    "is using to",
+    "is used to"
+   ],
+   "a": 3,
+   "src": "講義",
+   "tip": "be used to + V 被用來…"
+  },
+  {
+   "q": "Ed ____ in the accident. He ____ his leg and was taken to the hospital.",
+   "o": [
+    "got hurt; hurt",
+    "hurt; got hurt",
+    "hurt; hurt",
+    "got hurt; got hurt"
+   ],
+   "a": 0,
+   "src": "講義",
+   "tip": "人受傷 got hurt；傷到腿 hurt his leg"
+  },
+  {
+   "q": "There will be a new metro station near here, ____?",
+   "o": [
+    "isn't it",
+    "won't there",
+    "will there",
+    "is it"
+   ],
+   "a": 1,
+   "src": "講義",
+   "tip": "There will be → won't there"
+  },
+  {
+   "q": "Rita's read the book before, ____?",
+   "o": [
+    "didn't she",
+    "doesn't she",
+    "hasn't she",
+    "isn't she"
+   ],
+   "a": 2,
+   "src": "講義",
+   "tip": "Rita's read = has read"
+  }
+ ],
+ "fix": [
+  {
+   "t": "My dog Jimmy [[loves]] [[brushing]] with a comb. Every time I comb his hair, he [[will close]] his eyes and fall asleep.",
+   "e": 1,
+   "o": [
+    "being brushed",
+    "to brush",
+    "to be brushing"
+   ],
+   "a": 0,
+   "src": "105會考 第15題",
+   "p": 0.27,
+   "trap": null,
+   "tip": "狗是「被」梳毛 → love being brushed（動名詞被動）"
+  },
+  {
+   "t": "David [[looked out of]] the balcony window and [[saw]] a woman get in his car [[and drove]] away.",
+   "e": 2,
+   "o": [
+    "drive",
+    "drove",
+    "and drive"
+   ],
+   "a": 2,
+   "src": "111會考 第16題",
+   "p": 0.33,
+   "trap": 35.71,
+   "tip": "saw + 受詞 + 原形；and 連接 get in 與 drive"
+  },
+  {
+   "t": "It was very windy this morning. Some of the shirts on the balcony [[were blown]] away [[and fallen]] [[in]] the pond.",
+   "e": 1,
+   "o": [
+    "fell",
+    "and fell",
+    "fallen"
+   ],
+   "a": 1,
+   "src": "114會考 第19題",
+   "p": 0.38,
+   "trap": 37.05,
+   "tip": "fallen 是 p.p. 不能當動詞；and 連接 fell"
+  },
+  {
+   "t": "Alison doesn't like [[to tell]] what [[to do]]. She only [[does]] things she wants to do.",
+   "e": 0,
+   "o": [
+    "to be told",
+    "told",
+    "be told"
+   ],
+   "a": 0,
+   "src": "109會考 第11題",
+   "p": 0.42,
+   "trap": null,
+   "tip": "Alison 是「被」告知 → like to be told（不定詞被動）"
+  },
+  {
+   "t": "The housework in Mr. and Mrs. Wang's family [[are shared]] [[between]] them and their kids. [[Everyone's got]] their own job to do.",
+   "e": 0,
+   "o": [
+    "shares",
+    "share",
+    "is shared"
+   ],
+   "a": 2,
+   "src": "113會考 第19題",
+   "p": 0.44,
+   "trap": 32.15,
+   "tip": "主詞 the housework 不可數、單數 → is shared"
+  },
+  {
+   "t": "[[Having]] three cups of coffee a day [[can't be]] bad for our health, [[can they]]?",
+   "e": 2,
+   "o": [
+    "is it",
+    "can it",
+    "are they"
+   ],
+   "a": 1,
+   "src": "115會考 第8題",
+   "p": 0.53,
+   "trap": 19.67,
+   "tip": "動名詞片語當主詞視為單數，附加問句用 it → can it"
+  },
+  {
+   "t": "[[Getting up]] early on a cold morning [[is not]] easy, [[does it]]?",
+   "e": 2,
+   "o": [
+    "is it",
+    "are you",
+    "do you"
+   ],
+   "a": 0,
+   "src": "104會考 第3題",
+   "p": 0.58,
+   "trap": null,
+   "tip": "動詞是 is not → 附加問句用 be 動詞：is it"
+  },
+  {
+   "t": "Doraemon, a blue Japanese robot cat, [[has hated]] mice since his ears [[have bitten]] [[by]] a mouse.",
+   "e": 1,
+   "o": [
+    "bit",
+    "bite",
+    "were bitten"
+   ],
+   "a": 2,
+   "src": "112會考 第13題",
+   "p": 0.58,
+   "trap": 20.86,
+   "tip": "耳朵「被」咬，且是過去的事 → were bitten"
+  },
+  {
+   "t": "Many famous people [[visit]] this restaurant. Popular singers like A-mei and Jay Chou [[often seen]] here [[with]] their friends.",
+   "e": 1,
+   "o": [
+    "to be often seen",
+    "are often seen",
+    "and are often seen"
+   ],
+   "a": 1,
+   "src": "107會考 第11題",
+   "p": 0.67,
+   "trap": null,
+   "tip": "句子缺動詞，歌手「被看見」→ are often seen"
+  },
+  {
+   "t": "Don't worry. All the dishes [[have washed]], and the kitchen [[has been]] cleaned [[by]] Dad.",
+   "e": 0,
+   "o": [
+    "have been washed",
+    "has been washed",
+    "were washing"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "碗盤是「被」洗，複數 → have been washed"
+  },
+  {
+   "t": "The new library [[will build]] next year, so the old one [[is going to be]] closed [[in]] March.",
+   "e": 0,
+   "o": [
+    "is built",
+    "will be building",
+    "will be built"
+   ],
+   "a": 2,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "圖書館是「被」建造，未來被動 → will be built"
+  },
+  {
+   "t": "Your phone must [[be turn]] off [[before]] the test [[begins]].",
+   "e": 0,
+   "o": [
+    "been turned",
+    "be turned",
+    "to be turned"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "助動詞被動：must + be + p.p. → be turned"
+  },
+  {
+   "t": "Each of the students [[was given]] a book, and the books [[was]] [[written]] by Mr. Lin.",
+   "e": 1,
+   "o": [
+    "were",
+    "is",
+    "has"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "主詞 the books 為複數 → were written"
+  },
+  {
+   "t": "The accident [[was happened]] [[on]] a rainy night, and two people [[were hurt]].",
+   "e": 0,
+   "o": [
+    "is happened",
+    "has happened",
+    "happened"
+   ],
+   "a": 2,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "happen 是不及物動詞，沒有被動 → happened"
+  },
+  {
+   "t": "My bike [[was stolen]] last week, so I [[am taken]] the bus to school [[these days]].",
+   "e": 1,
+   "o": [
+    "was taken",
+    "am taking",
+    "have been taken"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "是我主動搭公車 → am taking（主動進行式）"
+  },
+  {
+   "t": "This song [[was written]] by [[she]] when she [[was]] only sixteen.",
+   "e": 1,
+   "o": [
+    "her",
+    "hers",
+    "she's"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "介系詞 by 後接受格 → by her"
+  },
+  {
+   "t": "Stars [[can't see]] in the city at night [[because]] the lights [[are]] too bright.",
+   "e": 0,
+   "o": [
+    "can't be saw",
+    "can't seeing",
+    "can't be seen"
+   ],
+   "a": 2,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "星星是「被看見」→ can't be seen"
+  },
+  {
+   "t": "Your brother [[has never]] [[been to]] Japan, [[hasn't he]]?",
+   "e": 2,
+   "o": [
+    "does he",
+    "has he",
+    "doesn't he"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "never 是否定詞 → 附加問句用肯定 has he"
+  },
+  {
+   "t": "There [[is]] little milk [[in]] the fridge, [[isn't there]]?",
+   "e": 2,
+   "o": [
+    "is there",
+    "is it",
+    "isn't it"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "little 表否定 → 附加問句用肯定 is there"
+  },
+  {
+   "t": "A: Nobody [[was]] late for the meeting, [[wasn't he]]?\nB: No. Everyone [[came]] on time.",
+   "e": 1,
+   "o": [
+    "weren't they",
+    "did they",
+    "were they"
+   ],
+   "a": 2,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "nobody 為否定 → 肯定問句；代名詞用 they → were they"
+  },
+  {
+   "t": "[[It's]] a sunny day. [[Let's]] go hiking, [[will you]]?",
+   "e": 2,
+   "o": [
+    "won't you",
+    "shall we",
+    "don't we"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "Let's 表提議 → 附加問句用 shall we"
+  },
+  {
+   "t": "[[Please]] turn down the music, [[don't you]]? I [[am trying]] to study.",
+   "e": 1,
+   "o": [
+    "will you",
+    "do you",
+    "won't we"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "祈使句的附加問句一律用 will you"
+  },
+  {
+   "t": "A: There are a lot of people in the park, [[aren't they]]?\nB: Yes. There [[is]] a concert [[there]] tonight.",
+   "e": 0,
+   "o": [
+    "are there",
+    "don't they",
+    "aren't there"
+   ],
+   "a": 2,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "There are … 的附加問句保留 there → aren't there"
+  },
+  {
+   "t": "[[I think]] Ken [[is]] the best player on the team, [[don't I]]?",
+   "e": 2,
+   "o": [
+    "is he",
+    "isn't he",
+    "doesn't he"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "I think + 子句：附加問句依子句 Ken is → isn't he"
+  },
+  {
+   "t": "A: [[Everyone]] [[is]] here now, [[isn't it]]?\nB: Yes. Let's start the meeting.",
+   "e": 2,
+   "o": [
+    "aren't they",
+    "are they",
+    "isn't there"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "everyone 的附加問句代名詞用 they → aren't they"
+  },
+  {
+   "t": "A: Mike [[don't]] drink coffee, [[does]] he?\nB: [[No]], he doesn't. He only drinks tea.",
+   "e": 0,
+   "o": [
+    "isn't",
+    "didn't",
+    "doesn't"
+   ],
+   "a": 2,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "主詞 Mike 第三人稱單數 → doesn't drink"
+  }
+ ]
+}

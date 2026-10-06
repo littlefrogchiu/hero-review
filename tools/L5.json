@@ -1,0 +1,926 @@
+{
+ "grammar": [
+  {
+   "q": "The earthquake ____ hit Taiwan yesterday morning was terrible.",
+   "o": [
+    "which",
+    "who",
+    "it",
+    "×"
+   ],
+   "a": 0,
+   "src": "段考卷第13回",
+   "tip": "先行詞是物（地震），關代當主詞不可省"
+  },
+  {
+   "q": "I like the girl ____ brown hair. She has a beautiful smile.",
+   "o": [
+    "who have",
+    "who has",
+    "which has",
+    "has"
+   ],
+   "a": 1,
+   "src": "段考卷第13回",
+   "tip": "girl 是人、單數 → who has"
+  },
+  {
+   "q": "The only thing ____ interests Molly is music.",
+   "o": [
+    "who",
+    "what",
+    "that",
+    "it"
+   ],
+   "a": 2,
+   "src": "段考卷第13回",
+   "tip": "先行詞有 the only 修飾 → 用 that"
+  },
+  {
+   "q": "The woman ____ the yellow dress is my mother.",
+   "o": [
+    "of",
+    "for",
+    "on",
+    "in"
+   ],
+   "a": 3,
+   "src": "段考卷第13回",
+   "tip": "in + 衣著：穿著黃色洋裝"
+  },
+  {
+   "q": "The dog ____ is playing with a ball is Amanda's pet.",
+   "o": [
+    "that",
+    "who",
+    "×",
+    "it"
+   ],
+   "a": 0,
+   "src": "段考卷第13回",
+   "tip": "先行詞是動物，關代當主詞 → that"
+  },
+  {
+   "q": "The boy ____ is wearing a hat is my brother.",
+   "o": [
+    "×",
+    "who",
+    "which",
+    "he"
+   ],
+   "a": 1,
+   "src": "段考卷第13回",
+   "tip": "先行詞是人，關代當主詞不可省 → who"
+  },
+  {
+   "q": "Let's help that man who ____ only one leg.",
+   "o": [
+    "have",
+    "having",
+    "has",
+    "with"
+   ],
+   "a": 2,
+   "src": "段考卷第13回",
+   "tip": "who 代替 man（單數）→ has"
+  },
+  {
+   "q": "The flowers ____ put in the vase were picked ____ my grandma this morning.",
+   "o": [
+    "which were; from",
+    "that; by",
+    "that; from",
+    "that were; by"
+   ],
+   "a": 3,
+   "src": "段考卷第13回",
+   "tip": "花是被放的 → that were put；被動用 by"
+  },
+  {
+   "q": "Most people ____ live in this building are nice and friendly.",
+   "o": [
+    "who",
+    "×",
+    "they",
+    "which"
+   ],
+   "a": 0,
+   "src": "段考卷第13回",
+   "tip": "先行詞是人，關代當主詞 → who"
+  },
+  {
+   "q": "Do you know the man ____ is standing in front of the school?",
+   "o": [
+    "×",
+    "that",
+    "he",
+    "which"
+   ],
+   "a": 1,
+   "src": "段考卷第13回",
+   "tip": "人當先行詞可用 who/that，不可省略"
+  },
+  {
+   "q": "Look at the man ____ a baby. Is he Kate's husband?",
+   "o": [
+    "is holding",
+    "is held",
+    "who is holding",
+    "that is held"
+   ],
+   "a": 2,
+   "src": "段考卷第13回",
+   "tip": "男人主動抱嬰兒 → who is holding"
+  },
+  {
+   "q": "Linda dreamed of living in a beautiful apartment ____ a great view.",
+   "o": [
+    "in",
+    "that have",
+    "who has",
+    "with"
+   ],
+   "a": 3,
+   "src": "段考卷第14回",
+   "tip": "with + 特徵：有美景的公寓"
+  },
+  {
+   "q": "The boxes ____ to Shawn's sisters are pink.",
+   "o": [
+    "which belong",
+    "which belongs",
+    "belong",
+    "belongs"
+   ],
+   "a": 0,
+   "src": "段考卷第14回",
+   "tip": "需關代；boxes 複數 → which belong"
+  },
+  {
+   "q": "The dog ____ is lying on the sofa bit Elva yesterday.",
+   "o": [
+    "×",
+    "that",
+    "it",
+    "who"
+   ],
+   "a": 1,
+   "src": "段考卷第14回",
+   "tip": "動物當先行詞、關代當主詞 → that"
+  },
+  {
+   "q": "The man with glasses ____ like my cousin Jimmy.",
+   "o": [
+    "is looking",
+    "look",
+    "looks",
+    "looking"
+   ],
+   "a": 2,
+   "src": "段考卷第14回",
+   "tip": "主詞是 The man（單數）→ looks"
+  },
+  {
+   "q": "Patty knows the kid ____ a dog as a pet.",
+   "o": [
+    "which keep",
+    "which keeps",
+    "who keep",
+    "who keeps"
+   ],
+   "a": 3,
+   "src": "段考卷第14回",
+   "tip": "kid 是人、單數 → who keeps"
+  },
+  {
+   "q": "A: Is this the painting ____ yesterday?\nB: Yes. The police found it a few hours ago.",
+   "o": [
+    "that was lost",
+    "losing",
+    "was lost",
+    "which were lost"
+   ],
+   "a": 0,
+   "src": "段考卷第14回",
+   "tip": "畫被弄丟、單數、過去 → that was lost"
+  },
+  {
+   "q": "The books ____ written by Alice Walker are on sale.",
+   "o": [
+    "which is",
+    "that were",
+    "who was",
+    "who are"
+   ],
+   "a": 1,
+   "src": "段考卷第14回",
+   "tip": "books 複數、是物 → that were written"
+  },
+  {
+   "q": "A: Who's that person ____ the black shirt?\nB: He's my uncle.",
+   "o": [
+    "of",
+    "wears",
+    "in",
+    "at"
+   ],
+   "a": 2,
+   "src": "段考卷第14回",
+   "tip": "in + 衣著：穿黑襯衫的人"
+  },
+  {
+   "q": "Have you tried the pies ____ made by Grandma? They are yummy.",
+   "o": [
+    "was",
+    "were",
+    "that was",
+    "which were"
+   ],
+   "a": 3,
+   "src": "段考卷第14回",
+   "tip": "pies 複數、被做 → which were made"
+  },
+  {
+   "q": "The woman who ____ asked me where the nearest metro station was.",
+   "o": [
+    "was wearing a white dress",
+    "in a white dress",
+    "are in a white dress",
+    "wearing a white dress"
+   ],
+   "a": 0,
+   "src": "段考卷第14回",
+   "tip": "who 後要接動詞；woman 單數 → was"
+  },
+  {
+   "q": "Rachel only uses notebooks ____ used paper.",
+   "o": [
+    "were made of",
+    "that were made of",
+    "that make",
+    "were making of"
+   ],
+   "a": 1,
+   "src": "段考卷第14回",
+   "tip": "筆記本由舊紙做成 → that were made of"
+  },
+  {
+   "q": "The cat ____ blue eyes is Tina's.",
+   "o": [
+    "in",
+    "whose",
+    "with",
+    "has"
+   ],
+   "a": 2,
+   "src": "段考卷第17回",
+   "tip": "with + 身體特徵：有藍眼睛的貓"
+  },
+  {
+   "q": "That's the man ____ talked to me in the supermarket yesterday.",
+   "o": [
+    "where",
+    "which",
+    "him",
+    "who"
+   ],
+   "a": 3,
+   "src": "段考卷第17回",
+   "tip": "先行詞是人、關代當主詞 → who"
+  },
+  {
+   "q": "They live in the house ____ a century ago.",
+   "o": [
+    "that was built",
+    "which built",
+    "was built",
+    "building"
+   ],
+   "a": 0,
+   "src": "段考卷第17回",
+   "tip": "房子是被蓋的 → that was built"
+  },
+  {
+   "q": "The apartment ____ four bedrooms ____ big enough for a family of three.",
+   "o": [
+    "that have; are",
+    "with; is",
+    "that has; are",
+    "has; is"
+   ],
+   "a": 1,
+   "src": "段考卷第17回",
+   "tip": "with 片語修飾；apartment 單數 → is"
+  },
+  {
+   "q": "Who is the singer ____ has a beautiful voice?",
+   "o": [
+    "whose",
+    "which",
+    "that",
+    "×"
+   ],
+   "a": 2,
+   "src": "段考卷第17回",
+   "tip": "關代當主詞不可省；人 → that/who"
+  },
+  {
+   "q": "The party ____ by Mr. and Mrs. Paul last night was fun.",
+   "o": [
+    "which held",
+    "was held",
+    "holding",
+    "which was held"
+   ],
+   "a": 3,
+   "src": "段考卷第17回",
+   "tip": "派對是被舉辦的 → which was held"
+  },
+  {
+   "q": "Ryan didn't like the dish ____ was made of fish.",
+   "o": [
+    "that",
+    "it",
+    "what",
+    "×"
+   ],
+   "a": 0,
+   "src": "段考卷第18回",
+   "tip": "關代當主詞不可省 → that"
+  },
+  {
+   "q": "The book ____ by a famous writer is about special buildings in the world.",
+   "o": [
+    "whose is written",
+    "which is written",
+    "who writes",
+    "what writes"
+   ],
+   "a": 1,
+   "src": "段考卷第18回",
+   "tip": "書是被寫的、物 → which is written"
+  },
+  {
+   "q": "Do you know the man ____ over there? He is Lisa's cousin from Canada.",
+   "o": [
+    "whose hat is it",
+    "whose jeans is brown",
+    "in a black jacket",
+    "in a green wallet"
+   ],
+   "a": 2,
+   "src": "段考卷第18回",
+   "tip": "in + 衣著：穿黑夾克的男人"
+  },
+  {
+   "q": "Dino's is the restaurant ____ is famous for their steak and good service.",
+   "o": [
+    "in which",
+    "who",
+    "in that",
+    "which"
+   ],
+   "a": 3,
+   "src": "段考卷第18回",
+   "tip": "關代在子句中當主詞 → which"
+  },
+  {
+   "q": "The students like the teacher ____ always wears a smile on his face.",
+   "o": [
+    "who",
+    "what",
+    "×",
+    "which"
+   ],
+   "a": 0,
+   "src": "主題式測驗卷",
+   "tip": "先行詞是人、關代當主詞 → who"
+  },
+  {
+   "q": "The horse ____ ran the fastest is Lucky.",
+   "o": [
+    "×",
+    "which",
+    "who",
+    "what"
+   ],
+   "a": 1,
+   "src": "主題式測驗卷",
+   "tip": "先行詞是動物 → which"
+  },
+  {
+   "q": "Those children who ____ playing video games in the room are my sons.",
+   "o": [
+    "×",
+    "is",
+    "are",
+    "be"
+   ],
+   "a": 2,
+   "src": "主題式測驗卷",
+   "tip": "who 代替 children（複數）→ are"
+  },
+  {
+   "q": "The girl ____ is speaking in the front of the classroom is our class leader.",
+   "o": [
+    "×",
+    "which",
+    "what",
+    "who"
+   ],
+   "a": 3,
+   "src": "主題式測驗卷",
+   "tip": "人當先行詞、關代當主詞 → who"
+  },
+  {
+   "q": "Miss Wang is the lady ____ long straight hair.",
+   "o": [
+    "with",
+    "have",
+    "in",
+    "about"
+   ],
+   "a": 0,
+   "src": "主題式測驗卷",
+   "tip": "with + 外表特徵：留長直髮"
+  },
+  {
+   "q": "Jenny is driving the car ____ belongs to me.",
+   "o": [
+    "×",
+    "that",
+    "it",
+    "who"
+   ],
+   "a": 1,
+   "src": "主題式測驗卷",
+   "tip": "物當先行詞、關代當主詞 → that"
+  },
+  {
+   "q": "A: Who's that boy ____ a pink T-shirt?\nB: Oh, that's my brother, Matthew.",
+   "o": [
+    "on",
+    "of",
+    "in",
+    "for"
+   ],
+   "a": 2,
+   "src": "主題式測驗卷",
+   "tip": "in + 衣著：穿粉紅 T 恤"
+  },
+  {
+   "q": "The reporter is going to interview a man ____ the new machine.",
+   "o": [
+    "is creating",
+    "that was created",
+    "created",
+    "who created"
+   ],
+   "a": 3,
+   "src": "主題式測驗卷",
+   "tip": "人主動發明機器 → who created"
+  },
+  {
+   "q": "A: I need to do a report on nuclear power, but I don't know how to do it.\nB: Don't worry. I have a book ____ it.",
+   "o": [
+    "about",
+    "in",
+    "for",
+    "with"
+   ],
+   "a": 0,
+   "src": "主題式測驗卷",
+   "tip": "about + 內容：關於核能的書"
+  },
+  {
+   "q": "Tai Tzuying is a world-famous badminton player ____ comes from Taiwan.",
+   "o": [
+    "what",
+    "who",
+    "×",
+    "which"
+   ],
+   "a": 1,
+   "src": "主題式測驗卷",
+   "tip": "先行詞是人、關代當主詞 → who"
+  },
+  {
+   "q": "Can anyone who knows the answer ____ it out loud?",
+   "o": [
+    "saying",
+    "to say",
+    "say",
+    "says"
+   ],
+   "a": 2,
+   "src": "講義",
+   "tip": "Can + 主詞 + 原形動詞 → say"
+  },
+  {
+   "q": "I like to read comic books ____ me laugh.",
+   "o": [
+    "which makes",
+    "made",
+    "to have made",
+    "that make"
+   ],
+   "a": 3,
+   "src": "講義",
+   "tip": "comic books 複數 → that make"
+  }
+ ],
+ "fix": [
+  {
+   "t": "All the excuses Nick [[made]] [[which say]] a lot about how much he [[hates to do]] the job.",
+   "e": 1,
+   "o": [
+    "say",
+    "saying",
+    "to say"
+   ],
+   "a": 0,
+   "src": "106會考 第13題",
+   "p": 0.4,
+   "trap": null,
+   "tip": "Nick made 前省略了關代，句子還缺主要動詞，應直接接 say"
+  },
+  {
+   "t": "The police [[haven't found]] the little girl who [[has taken away]] at a supermarket. They'll [[keep doing]] all they can to find her.",
+   "e": 1,
+   "o": [
+    "took away",
+    "taken away",
+    "was taken away"
+   ],
+   "a": 2,
+   "src": "111會考 第17題",
+   "p": 0.49,
+   "trap": 22.65,
+   "tip": "女孩是「被」帶走的，且是過去發生 → was taken away"
+  },
+  {
+   "t": "Scott wasn't sure [[if]] the young woman [[before him]] was [[the one]] pulled him out of a car on fire.",
+   "e": 2,
+   "o": [
+    "who",
+    "the one she",
+    "the one who"
+   ],
+   "a": 2,
+   "src": "112會考 第19題",
+   "p": 0.56,
+   "trap": 17.04,
+   "tip": "the one 後面接動詞 pulled，需要關代 who 連接"
+  },
+  {
+   "t": "Students [[want]] to go on the school trip [[should ask]] [[their parents]] first.",
+   "e": 0,
+   "o": [
+    "who want",
+    "who they want",
+    "what they want"
+   ],
+   "a": 0,
+   "src": "113會考 第12題",
+   "p": 0.59,
+   "trap": 19.59,
+   "tip": "句中已有動詞 should ask，修飾 Students 要用 who want"
+  },
+  {
+   "t": "I [[thought]] the girl [[answered the phone]] was Kate, but it was [[her sister]], Candy. They sounded almost the same.",
+   "e": 1,
+   "o": [
+    "she answered the phone",
+    "who answered the phone",
+    "and answered the phone"
+   ],
+   "a": 1,
+   "src": "115會考 第11題",
+   "p": 0.7,
+   "trap": 13.26,
+   "tip": "子句不能有兩個動詞，修飾 the girl 需關代 who"
+  },
+  {
+   "t": "Little Eric chose the doll [[in]] big brown eyes [[because]] it was [[the cutest]] in the store.",
+   "e": 0,
+   "o": [
+    "at",
+    "on",
+    "with"
+   ],
+   "a": 2,
+   "src": "115會考 第6題",
+   "p": 0.71,
+   "trap": 13.1,
+   "tip": "身體特徵用 with：有棕色大眼睛的娃娃"
+  },
+  {
+   "t": "Do you [[know]] [[the girls]] who [[is]] singing on the stage?",
+   "e": 2,
+   "o": [
+    "are",
+    "be",
+    "being"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "who 代替 the girls（複數），動詞要用 are"
+  },
+  {
+   "t": "The box [[of]] apples [[are]] for Grandma, so please [[don't eat]] any.",
+   "e": 1,
+   "o": [
+    "is",
+    "be",
+    "being"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "主詞是 The box（單數），of apples 只是修飾 → is"
+  },
+  {
+   "t": "Do you know the woman [[who she]] is [[talking to]] Mr. Lin? She [[looks]] familiar.",
+   "e": 0,
+   "o": [
+    "who",
+    "she",
+    "which"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "who 已當子句主詞，後面不能再加 she"
+  },
+  {
+   "t": "The man [[lives]] next door [[often helps]] us [[carry]] heavy boxes.",
+   "e": 0,
+   "o": [
+    "who lives",
+    "who live",
+    "he lives"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "已有動詞 helps，修飾 The man 須加關代 who"
+  },
+  {
+   "t": "Mr. Chen is [[one of the]] teachers who really [[cares]] about students, so everyone [[likes]] him.",
+   "e": 1,
+   "o": [
+    "caring",
+    "care",
+    "to care"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "who 的先行詞是 teachers（複數）→ care"
+  },
+  {
+   "t": "Amy [[is talking]] [[with]] the boy [[which]] won the race yesterday.",
+   "e": 2,
+   "o": [
+    "what",
+    "who",
+    "whose"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "先行詞 the boy 是人，關代用 who，不用 which"
+  },
+  {
+   "t": "Tom [[bought]] a new phone [[who]] can [[take]] great pictures.",
+   "e": 1,
+   "o": [
+    "it",
+    "what",
+    "which"
+   ],
+   "a": 2,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "先行詞 phone 是物，關代用 which/that"
+  },
+  {
+   "t": "Who is the boy [[in]] a big nose? He [[is standing]] [[next to]] Amy.",
+   "e": 0,
+   "o": [
+    "on",
+    "with",
+    "of"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "身體特徵用 with；in 用於衣著"
+  },
+  {
+   "t": "The students [[in]] Ms. Lin's class [[is]] going to [[visit]] a museum tomorrow.",
+   "e": 1,
+   "o": [
+    "was",
+    "be",
+    "are"
+   ],
+   "a": 2,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "主詞是 The students（複數），in 片語不影響 → are"
+  },
+  {
+   "t": "[[Every morning]], the girl [[with]] two little dogs [[walk]] in the park.",
+   "e": 2,
+   "o": [
+    "walks",
+    "walking",
+    "to walk"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "主詞是 the girl（單數），不是 dogs → walks"
+  },
+  {
+   "t": "I [[want to]] make friends [[with]] a girl who [[speak]] French.",
+   "e": 2,
+   "o": [
+    "to speak",
+    "speaks",
+    "speaking"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "who 代替 a girl（單數）→ speaks"
+  },
+  {
+   "t": "The bridge which [[built]] [[in]] 1990 [[is]] still very strong.",
+   "e": 0,
+   "o": [
+    "building",
+    "was built",
+    "has built"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "橋是「被」建造的，且在過去 → was built"
+  },
+  {
+   "t": "Anyone who [[want]] to join the club [[should]] [[fill out]] this form.",
+   "e": 0,
+   "o": [
+    "wanting",
+    "to want",
+    "wants"
+   ],
+   "a": 2,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "anyone 視為單數，who 後動詞 → wants"
+  },
+  {
+   "t": "The boy who [[lives]] [[across]] the street [[playing]] the piano every night.",
+   "e": 2,
+   "o": [
+    "play",
+    "plays",
+    "to play"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "主詞 The boy 缺主要動詞，單數現在式 → plays"
+  },
+  {
+   "t": "Everyone [[loved]] the movie [[what]] [[was shown]] last night.",
+   "e": 1,
+   "o": [
+    "it",
+    "that",
+    "who"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "what 不能當關代修飾名詞，物用 that/which"
+  },
+  {
+   "t": "The bike [[which it]] is [[parked]] outside [[belongs to]] Ken.",
+   "e": 0,
+   "o": [
+    "who",
+    "it",
+    "which"
+   ],
+   "a": 2,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "which 已當子句主詞，不能再加 it"
+  },
+  {
+   "t": "We [[want to]] buy the house [[has]] a big garden [[near]] the park.",
+   "e": 1,
+   "o": [
+    "with",
+    "who have",
+    "of"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "已有動詞 buy；「有大花園的房子」用 with"
+  },
+  {
+   "t": "People who [[eats]] too much sugar [[often have]] bad teeth, so [[be careful]].",
+   "e": 0,
+   "o": [
+    "to eat",
+    "eat",
+    "eating"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "who 代替 People（複數）→ eat"
+  },
+  {
+   "t": "The color [[of]] her eyes [[are]] the same as [[her mother's]].",
+   "e": 1,
+   "o": [
+    "is",
+    "were",
+    "be"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "主詞是 The color（單數），of her eyes 是修飾 → is"
+  },
+  {
+   "t": "I [[still remember]] the kind woman [[at the station]] who [[helps]] me yesterday.",
+   "e": 2,
+   "o": [
+    "has helped",
+    "helped",
+    "is helping"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "yesterday 是過去時間 → helped"
+  },
+  {
+   "t": "[[This morning]], the teacher [[asked]] the boys who [[was]] late to clean the classroom.",
+   "e": 2,
+   "o": [
+    "were",
+    "be",
+    "being"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "who 代替 the boys（複數），過去式 → were"
+  },
+  {
+   "t": "My dog [[is]] afraid [[of]] the cats which [[lives]] next door.",
+   "e": 2,
+   "o": [
+    "live",
+    "living",
+    "to live"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "which 代替 the cats（複數）→ live"
+  }
+ ]
+}

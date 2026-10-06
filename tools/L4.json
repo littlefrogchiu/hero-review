@@ -1,0 +1,844 @@
+{
+ "grammar": [
+  {
+   "q": "I wanted to know ____ it would rain this afternoon. So, I checked the weather report.",
+   "o": [
+    "that",
+    "if",
+    "which",
+    "what"
+   ],
+   "a": 1,
+   "src": "段考卷第9回",
+   "tip": "想知道「是否」會下雨 → if / whether"
+  },
+  {
+   "q": "Please let me know what ____ to make a sandwich.",
+   "o": [
+    "is needed",
+    "do we need",
+    "needs",
+    "to be needed"
+   ],
+   "a": 0,
+   "src": "段考卷第9回",
+   "tip": "what 當主詞，被需要 → is needed"
+  },
+  {
+   "q": "Ben didn't know ____. Could you help him?",
+   "o": [
+    "what could he do",
+    "how does he do it",
+    "what he does",
+    "how to do it"
+   ],
+   "a": 3,
+   "src": "段考卷第9回",
+   "tip": "wh- 不定詞：how to do it；間接問句不倒裝"
+  },
+  {
+   "q": "Vic wasn't sure ____ the money.",
+   "o": [
+    "how did Fred take",
+    "when could he take",
+    "who took",
+    "why did Fred take"
+   ],
+   "a": 2,
+   "src": "段考卷第9回",
+   "tip": "who 當主詞，語序不變：who took"
+  },
+  {
+   "q": "I'm not sure ____ Tim will go to work tomorrow.",
+   "o": [
+    "who",
+    "whether",
+    "what",
+    "which"
+   ],
+   "a": 1,
+   "src": "段考卷第9回",
+   "tip": "不確定「是否」→ whether"
+  },
+  {
+   "q": "Harry didn't know ____ his homework, so he asked Jimmy for help.",
+   "o": [
+    "how to do",
+    "what he does",
+    "how does he do",
+    "where could he do"
+   ],
+   "a": 0,
+   "src": "段考卷第9回",
+   "tip": "不知如何做 → how to do（wh- + to V）"
+  },
+  {
+   "q": "I have no idea ____ Judy didn't go to school.",
+   "o": [
+    "where",
+    "what",
+    "who",
+    "why"
+   ],
+   "a": 3,
+   "src": "段考卷第9回",
+   "tip": "不知道她「為什麼」沒上學 → why"
+  },
+  {
+   "q": "Ben has no idea ____ with his sports car.",
+   "o": [
+    "what is happened",
+    "what did happen",
+    "what's wrong",
+    "what wrong is"
+   ],
+   "a": 2,
+   "src": "段考卷第9回",
+   "tip": "what 當主詞：what's wrong with"
+  },
+  {
+   "q": "My mom and I talked ____.",
+   "o": [
+    "where to eat dinner",
+    "about what to eat for dinner",
+    "what to eat for dinner",
+    "about where will we eat dinner"
+   ],
+   "a": 1,
+   "src": "段考卷第9回",
+   "tip": "talk about + 名詞片語；wh- + to V"
+  },
+  {
+   "q": "My brother didn't tell me ____ in the box.",
+   "o": [
+    "what was",
+    "what",
+    "where was",
+    "where"
+   ],
+   "a": 0,
+   "src": "段考卷第9回",
+   "tip": "what 當主詞：what was in the box"
+  },
+  {
+   "q": "My mom has no idea ____ my dad will get home because he left his smartphone at home.",
+   "o": [
+    "where",
+    "what",
+    "who",
+    "when"
+   ],
+   "a": 3,
+   "src": "段考卷第9回",
+   "tip": "不知爸爸「何時」到家 → when"
+  },
+  {
+   "q": "Amanda didn't know ____, so she googled it.",
+   "o": [
+    "when the shop was",
+    "which was the shop",
+    "where the shop was",
+    "where was the shop"
+   ],
+   "a": 2,
+   "src": "段考卷第9回",
+   "tip": "間接問句：wh- + 主詞 + 動詞"
+  },
+  {
+   "q": "No one knows ____ will happen tomorrow, so let's live in the present.",
+   "o": [
+    "how",
+    "what",
+    "who",
+    "when"
+   ],
+   "a": 1,
+   "src": "段考卷第10回",
+   "tip": "what 當子句主詞：what will happen"
+  },
+  {
+   "q": "I have no idea ____ Alice works for, but I guess her boss is Mr. Wang.",
+   "o": [
+    "who",
+    "when",
+    "where",
+    "how"
+   ],
+   "a": 0,
+   "src": "段考卷第10回",
+   "tip": "work for 某人 → who（老闆是誰）"
+  },
+  {
+   "q": "Ivan wants to know ____ Dylan doesn't have to spend a lot of time studying and still gets good grades.",
+   "o": [
+    "where",
+    "whether",
+    "when",
+    "why"
+   ],
+   "a": 3,
+   "src": "段考卷第10回",
+   "tip": "想知道「原因」→ why"
+  },
+  {
+   "q": "Bill hasn't decided whether ____ the notebook or not.",
+   "o": [
+    "will he buy",
+    "he bought",
+    "to buy",
+    "buying"
+   ],
+   "a": 2,
+   "src": "段考卷第10回",
+   "tip": "whether + to V（是否要…）"
+  },
+  {
+   "q": "A: Could you show me ____ to the nearest metro station?\nB: Sure. Go along this road for two blocks and turn right. It's on your right.",
+   "o": [
+    "how I got",
+    "how to get",
+    "that I can get",
+    "how can I get"
+   ],
+   "a": 1,
+   "src": "段考卷第10回",
+   "tip": "問路：how to get to…"
+  },
+  {
+   "q": "Monica was not sure ____ her son turned off the fan, so she checked it again.",
+   "o": [
+    "if",
+    "which",
+    "what",
+    "why"
+   ],
+   "a": 0,
+   "src": "段考卷第10回",
+   "tip": "不確定「是否」關了 → if"
+  },
+  {
+   "q": "I went to bed early last night, so I didn't know ____ my sister got home.",
+   "o": [
+    "who",
+    "where",
+    "what",
+    "when"
+   ],
+   "a": 3,
+   "src": "段考卷第10回",
+   "tip": "早睡所以不知「何時」回家 → when"
+  },
+  {
+   "q": "Does anybody know ____ Judy ____ to the party tonight?",
+   "o": [
+    "that; to come",
+    "that; coming",
+    "whether; will come",
+    "whether; come"
+   ],
+   "a": 2,
+   "src": "段考卷第10回",
+   "tip": "名詞子句表未來仍用 will"
+  },
+  {
+   "q": "A: I don't know ____ with my life.\nB: Just listen to your heart, and it will show you the way.",
+   "o": [
+    "how to do",
+    "what to do",
+    "what I do",
+    "how I do"
+   ],
+   "a": 1,
+   "src": "段考卷第10回",
+   "tip": "do 需要受詞 → what to do"
+  },
+  {
+   "q": "Tina and Kevin want to know when ____ to the bus station.",
+   "o": [
+    "they should go",
+    "do they go",
+    "will they go",
+    "can they go"
+   ],
+   "a": 0,
+   "src": "段考卷第11回",
+   "tip": "間接問句不倒裝：when they should go"
+  },
+  {
+   "q": "I don't care ____. The point is that she didn't finish the work on time.",
+   "o": [
+    "what is she saying",
+    "which does she say",
+    "which she says",
+    "what she said"
+   ],
+   "a": 3,
+   "src": "段考卷第11回",
+   "tip": "間接問句：what + 主詞 + 動詞"
+  },
+  {
+   "q": "Vera went out very early this morning. I'm not sure ____ she had breakfast or not.",
+   "o": [
+    "how",
+    "who",
+    "if",
+    "what"
+   ],
+   "a": 2,
+   "src": "段考卷第11回",
+   "tip": "…or not → if / whether（是否）"
+  },
+  {
+   "q": "I have no idea ____ you love spiders so much.",
+   "o": [
+    "what",
+    "why",
+    "which",
+    "where"
+   ],
+   "a": 1,
+   "src": "段考卷第11回",
+   "tip": "不知「為什麼」喜歡 → why"
+  },
+  {
+   "q": "I don't know where ____ the latest smartphone.",
+   "o": [
+    "to get",
+    "get",
+    "gets",
+    "getting"
+   ],
+   "a": 0,
+   "src": "段考卷第11回",
+   "tip": "wh- 不定詞：where to get"
+  },
+  {
+   "q": "Tell me ____ Dennis brushed his teeth before he went to bed.",
+   "o": [
+    "who",
+    "what",
+    "which",
+    "whether"
+   ],
+   "a": 3,
+   "src": "段考卷第11回",
+   "tip": "問「是否」刷牙 → whether"
+  },
+  {
+   "q": "Can you tell me ____ Ivan? He looks worried.",
+   "o": [
+    "what's happening",
+    "what happened",
+    "what's wrong with",
+    "where is"
+   ],
+   "a": 2,
+   "src": "段考卷第12回",
+   "tip": "what's wrong with + 人（某人怎麼了）"
+  },
+  {
+   "q": "A: Judy is not sure ____ get to the small town.\nB: Maybe she can take a taxi there.",
+   "o": [
+    "how can",
+    "how to",
+    "how can she",
+    "where she can"
+   ],
+   "a": 1,
+   "src": "段考卷第12回",
+   "tip": "how to + 原形動詞"
+  },
+  {
+   "q": "Nathan doesn't know why ____.",
+   "o": [
+    "Meg left him",
+    "is Meg late",
+    "did Meg cry",
+    "did Meg lie to him"
+   ],
+   "a": 0,
+   "src": "段考卷第12回",
+   "tip": "間接問句不倒裝：why + 主詞 + 動詞"
+  },
+  {
+   "q": "I'll always remember ____.",
+   "o": [
+    "how he said",
+    "what did he say to me",
+    "how nice was he",
+    "how nice he was"
+   ],
+   "a": 3,
+   "src": "段考卷第12回",
+   "tip": "how + 形容詞 + 主詞 + be"
+  },
+  {
+   "q": "A: Can you show me ____?\nB: Sure, no problem.",
+   "o": [
+    "how do you play the game",
+    "what do you do",
+    "how to play the game",
+    "what you play the game"
+   ],
+   "a": 2,
+   "src": "段考卷第12回",
+   "tip": "show me how to + V"
+  },
+  {
+   "q": "I'm not sure ____ I can go to Joyce's birthday party.",
+   "o": [
+    "who",
+    "if",
+    "what",
+    "which"
+   ],
+   "a": 1,
+   "src": "主題式測驗卷",
+   "tip": "不確定「是否」能去 → if"
+  },
+  {
+   "q": "Mrs. Wu wants to know ____ the toys are made in China or not.",
+   "o": [
+    "whether",
+    "that",
+    "why",
+    "where"
+   ],
+   "a": 0,
+   "src": "主題式測驗卷",
+   "tip": "whether…or not（是否）"
+  },
+  {
+   "q": "My aunt didn't remember ____ she parked her car, so she spent two hours looking for it.",
+   "o": [
+    "when",
+    "which",
+    "what",
+    "where"
+   ],
+   "a": 3,
+   "src": "主題式測驗卷",
+   "tip": "找車 → 忘了停在「哪裡」where"
+  },
+  {
+   "q": "Dad, I don't know ____ to do my math homework. Can you help me?",
+   "o": [
+    "what",
+    "if",
+    "how",
+    "who"
+   ],
+   "a": 2,
+   "src": "主題式測驗卷",
+   "tip": "已有受詞 homework → how to"
+  },
+  {
+   "q": "Could you tell me ____?",
+   "o": [
+    "what is Andy looking at",
+    "what Andy was talking about",
+    "what does Andy like to eat",
+    "where did Andy go last night"
+   ],
+   "a": 1,
+   "src": "主題式測驗卷",
+   "tip": "間接問句語序：wh- + 主詞 + 動詞"
+  },
+  {
+   "q": "My mom had no idea ____ for dinner, so we decided to eat out.",
+   "o": [
+    "what to cook",
+    "what could we eat",
+    "what should she cook",
+    "where would we go"
+   ],
+   "a": 0,
+   "src": "主題式測驗卷",
+   "tip": "wh- 不定詞：what to cook"
+  },
+  {
+   "q": "A: You are late. What took you so long?\nB: I couldn't decide ____ wear a dress or not.",
+   "o": [
+    "I should",
+    "why I should",
+    "if should I",
+    "whether I should"
+   ],
+   "a": 3,
+   "src": "主題式測驗卷",
+   "tip": "whether + 主詞 + should，不倒裝"
+  },
+  {
+   "q": "Sorry, I don't quite understand ____. Can you explain it to me?",
+   "o": [
+    "what to say it",
+    "what did you say",
+    "what you said",
+    "what have you said"
+   ],
+   "a": 2,
+   "src": "主題式測驗卷",
+   "tip": "間接問句：what you said"
+  },
+  {
+   "q": "A: Who is the man outside the classroom?\nB: I'm not sure ____.",
+   "o": [
+    "who is he",
+    "who he is",
+    "who the man",
+    "who do you mean"
+   ],
+   "a": 1,
+   "src": "主題式測驗卷",
+   "tip": "Who is he? → who he is"
+  },
+  {
+   "q": "We will give Ann a surprise when she ____ home. However, we don't know when she ____ home.",
+   "o": [
+    "gets; will get",
+    "gets; gets",
+    "will get; will get",
+    "got; gets"
+   ],
+   "a": 0,
+   "src": "講義",
+   "tip": "時間副詞子句用現在式；名詞子句保留 will"
+  },
+  {
+   "q": "Whether it ____ or not, we will have the party.",
+   "o": [
+    "will rain",
+    "rained",
+    "is raining",
+    "rains"
+   ],
+   "a": 3,
+   "src": "講義",
+   "tip": "Whether…or not 表「無論」，現在式代未來"
+  }
+ ],
+ "fix": [
+  {
+   "t": "Before she [[asked]] about it, you [[should tell]] Daphne you [[broke]] her favorite cup.",
+   "e": 0,
+   "o": [
+    "asks",
+    "was asking",
+    "will ask"
+   ],
+   "a": 0,
+   "src": "114會考 第18題",
+   "p": 0.48,
+   "trap": 26.42,
+   "tip": "Before 時間副詞子句說未來的事，用現在式代替未來 → asks"
+  },
+  {
+   "t": "Tonight I'll [[stay]] at the office until I [[will finish]] the work. Then I'll [[drive]] home.",
+   "e": 1,
+   "o": [
+    "finish",
+    "am finishing",
+    "finished"
+   ],
+   "a": 0,
+   "src": "104會考 第4題",
+   "p": 0.54,
+   "trap": null,
+   "tip": "until 引導時間副詞子句，用現在式代替未來，不用 will"
+  },
+  {
+   "t": "Jill: [[Have you decided]] [[where]] you will celebrate your 30th birthday?\nSue: Yeah, [[I'm going to have]] a big barbecue party.",
+   "e": 1,
+   "o": [
+    "how",
+    "what",
+    "when"
+   ],
+   "a": 0,
+   "src": "109會考 第10題",
+   "p": 0.6,
+   "trap": null,
+   "tip": "回答「辦烤肉派對」是慶祝的方式 → how，不是地點"
+  },
+  {
+   "t": "Alan [[works hard]] in his new job, and he [[wants]] to know [[that]] his boss feels about him.",
+   "e": 2,
+   "o": [
+    "how",
+    "whether",
+    "why"
+   ],
+   "a": 0,
+   "src": "115會考 第10題",
+   "p": 0.6,
+   "trap": 16.7,
+   "tip": "know 後接疑問的名詞子句；feel about 某人要問「如何」→ how"
+  },
+  {
+   "t": "John [[will stay]] with his sister [[until]] he [[will find]] an apartment.",
+   "e": 2,
+   "o": [
+    "would find",
+    "finds",
+    "found"
+   ],
+   "a": 1,
+   "src": "113會考 第11題",
+   "p": 0.62,
+   "trap": 13.71,
+   "tip": "until 時間副詞子句用現在式代替未來 → finds"
+  },
+  {
+   "t": "If we [[play]] some interesting games in class, there [[will have]] more fun [[in learning]] English.",
+   "e": 1,
+   "o": [
+    "are",
+    "has",
+    "will be"
+   ],
+   "a": 2,
+   "src": "112會考 第14題",
+   "p": 0.62,
+   "trap": 16.61,
+   "tip": "「有」要用 there be，不可用 there have → will be"
+  },
+  {
+   "t": "Jerry [[wanted to know]] [[whether]] he was kicked off the soccer team, but no one [[gave]] him a good reason.",
+   "e": 1,
+   "o": [
+    "where",
+    "when",
+    "why"
+   ],
+   "a": 2,
+   "src": "112會考 第10題",
+   "p": 0.65,
+   "trap": 14.44,
+   "tip": "後文說沒人給他「理由」→ 想知道為什麼 why"
+  },
+  {
+   "t": "We are surprised that Sally and Ray [[decided to get]] married. No one knows [[when]]. They often fight [[with each other]] and are unhappy together.",
+   "e": 1,
+   "o": [
+    "why",
+    "where",
+    "how"
+   ],
+   "a": 0,
+   "src": "106會考 第8題",
+   "p": 0.68,
+   "trap": null,
+   "tip": "兩人常吵架卻要結婚，沒人知道「原因」→ why"
+  },
+  {
+   "t": "Alice: Do you know [[whether]] Grandma [[is going to visit]] us?\nWilly: It's next week. She [[told me]] on the phone. And we'll take her to the national park.",
+   "e": 0,
+   "o": [
+    "where",
+    "when",
+    "why"
+   ],
+   "a": 1,
+   "src": "107會考 第9題",
+   "p": 0.72,
+   "trap": null,
+   "tip": "回答 It's next week 是時間 → 問 when"
+  },
+  {
+   "t": "I [[have to give]] Mr. Lin this letter. Could you [[tell me]] where [[does he live]]?",
+   "e": 2,
+   "o": [
+    "he lives",
+    "he live",
+    "did he live"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "間接問句不倒裝、去掉 does：where he lives"
+  },
+  {
+   "t": "This math problem is so hard. I don't know [[what to do]] it. Can you [[help]] me? I [[have tried]] three times.",
+   "e": 0,
+   "o": [
+    "how to do",
+    "what I do",
+    "how do I do"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "do it 已有受詞 it，不能再用 what → how to do it"
+  },
+  {
+   "t": "[[If]] Tom will join us or not [[is]] not important. We [[will go]] anyway.",
+   "e": 0,
+   "o": [
+    "Whether",
+    "That",
+    "What"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "名詞子句當主詞放句首只能用 Whether，不可用 If"
+  },
+  {
+   "t": "I wonder if it [[rains]] tomorrow. If it [[does]], we'll [[stay]] home.",
+   "e": 0,
+   "o": [
+    "will rain",
+    "rained",
+    "has rained"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "wonder if 是名詞子句（是否），未來要用 will；條件句才用現在式"
+  },
+  {
+   "t": "A: Who is the tall boy [[next to]] Amy?\nB: Sorry, I [[have no idea]] [[who is he]].",
+   "e": 2,
+   "o": [
+    "who he is",
+    "who he does",
+    "who does he"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "間接問句 be 動詞移到主詞後：who he is"
+  },
+  {
+   "t": "You look upset. Please tell me [[what did he say]] to you [[at]] the party. Did he [[make]] you angry?",
+   "e": 0,
+   "o": [
+    "what he said",
+    "what he says",
+    "what does he say"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "間接問句去掉 did，動詞改過去式：what he said"
+  },
+  {
+   "t": "Mom asked me [[why to be]] late, but I [[didn't tell]] her [[the truth]].",
+   "e": 0,
+   "o": [
+    "why I was",
+    "why was I",
+    "why I am"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "why 沒有不定詞用法；asked 過去 → why I was late"
+  },
+  {
+   "t": "We [[talked]] about [[if]] we should go camping [[this weekend]].",
+   "e": 1,
+   "o": [
+    "whether",
+    "that",
+    "what"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "介系詞 about 後面的「是否」只能用 whether，不用 if"
+  },
+  {
+   "t": "I don't know [[when]] Dad will come back. [[When]] he [[will come]] back, I'll give him the card.",
+   "e": 2,
+   "o": [
+    "comes",
+    "came",
+    "is coming"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "第二個 When 是時間副詞子句，用現在式代未來 → comes"
+  },
+  {
+   "t": "Do you know [[what time is it]]? My watch [[stopped]] and I [[don't want to]] be late.",
+   "e": 0,
+   "o": [
+    "what time it is",
+    "what time does it be",
+    "when it is time"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "間接問句不倒裝：what time it is"
+  },
+  {
+   "t": "Could you [[show me]] [[how can I get]] to the train station? I'm [[new]] here.",
+   "e": 1,
+   "o": [
+    "how to get",
+    "how I got",
+    "that I can get"
+   ],
+   "a": 0,
+   "src": "改編自段考卷",
+   "p": null,
+   "trap": null,
+   "tip": "間接問句不可倒裝；show me how to get…"
+  },
+  {
+   "t": "I [[want to buy]] a gift [[for]] Helen, but I don't know [[what she like]].",
+   "e": 2,
+   "o": [
+    "what she likes",
+    "what does she like",
+    "how she does like"
+   ],
+   "a": 0,
+   "src": "改編自講義",
+   "p": null,
+   "trap": null,
+   "tip": "主詞 she 第三人稱單數，動詞加 s：what she likes"
+  },
+  {
+   "t": "[[Nobody]] knows [[if]] the singer [[comes]] to Taiwan next month.",
+   "e": 2,
+   "o": [
+    "will come",
+    "came",
+    "has come"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "if 子句當 knows 的受詞（是否），未來的事要用 will come"
+  },
+  {
+   "t": "This red bike [[has been]] parked here [[for]] days. Do you know [[whose bike is it]]?",
+   "e": 2,
+   "o": [
+    "whose bike it is",
+    "which bike is it",
+    "whose bike does it"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "間接問句 be 動詞放主詞後：whose bike it is"
+  }
+ ]
+}

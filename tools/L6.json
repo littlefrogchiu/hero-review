@@ -1,0 +1,930 @@
+{
+ "grammar": [
+  {
+   "q": "Look at the photos ____ Matt took. They are so beautiful.",
+   "o": [
+    "which",
+    "who",
+    "whose",
+    "what"
+   ],
+   "a": 0,
+   "src": "段考卷第15回",
+   "tip": "先行詞 photos 是物，關代受格用 which"
+  },
+  {
+   "q": "This is the house ____ my parents want to live in.",
+   "o": [
+    "who",
+    "that",
+    "whose",
+    "what"
+   ],
+   "a": 1,
+   "src": "段考卷第15回",
+   "tip": "先行詞 house 是物，用 that；介系詞 in 留句尾"
+  },
+  {
+   "q": "Let's do something to help those families ____ houses collapsed（倒塌）during the earthquake.",
+   "o": [
+    "what",
+    "which",
+    "whose",
+    "who"
+   ],
+   "a": 2,
+   "src": "段考卷第15回",
+   "tip": "families 的房子 → 所有格 whose + 名詞"
+  },
+  {
+   "q": "The small town in ____ my grandpa used to live was clean and quiet.",
+   "o": [
+    "where",
+    "×",
+    "that",
+    "which"
+   ],
+   "a": 3,
+   "src": "段考卷第15回",
+   "tip": "介系詞後的關代只能用 which（物）/ whom（人）"
+  },
+  {
+   "q": "These are the fresh pears ____ I gave Lisa.",
+   "o": [
+    "that",
+    "who",
+    "this",
+    "what"
+   ],
+   "a": 0,
+   "src": "段考卷第15回",
+   "tip": "先行詞 pears 是物，受格關代用 that"
+  },
+  {
+   "q": "The actress ____ you saw last night had a car accident this morning.",
+   "o": [
+    "which",
+    "that",
+    "where",
+    "what"
+   ],
+   "a": 1,
+   "src": "段考卷第15回",
+   "tip": "先行詞是人，受格用 who(m)/that"
+  },
+  {
+   "q": "The cheesecake ____ Edward made was delicious.",
+   "o": [
+    "it",
+    "what",
+    "×",
+    "who"
+   ],
+   "a": 2,
+   "src": "段考卷第15回",
+   "tip": "受格關代可省略；不可再加 it"
+  },
+  {
+   "q": "The men ____ are smart and hard-working.",
+   "o": [
+    "you were invited",
+    "are playing basketball",
+    "that comes from the UK",
+    "Johnny works with"
+   ],
+   "a": 3,
+   "src": "段考卷第15回",
+   "tip": "省略受格關代：Johnny works with 人"
+  },
+  {
+   "q": "The story Gina wrote ____.",
+   "o": [
+    "is interesting",
+    "interesting",
+    "interested",
+    "interest me"
+   ],
+   "a": 0,
+   "src": "段考卷第15回",
+   "tip": "主詞 The story 後缺動詞 → is"
+  },
+  {
+   "q": "The news ____ we heard on the radio was really terrible.",
+   "o": [
+    "where",
+    "that",
+    "what",
+    "who"
+   ],
+   "a": 1,
+   "src": "段考卷第15回",
+   "tip": "news 是物，受格關代用 that/which"
+  },
+  {
+   "q": "The guy ____ Lily and Stella met at the party is my cousin.",
+   "o": [
+    "which",
+    "this",
+    "that",
+    "whose"
+   ],
+   "a": 2,
+   "src": "段考卷第15回",
+   "tip": "先行詞 guy 是人，受格用 that/who(m)"
+  },
+  {
+   "q": "Jim told me the girl ____ this morning is his sister.",
+   "o": [
+    "that he talks to",
+    "which he talked about",
+    "he talked",
+    "who he talked to"
+   ],
+   "a": 3,
+   "src": "段考卷第15回",
+   "tip": "人用 who；過去式 talked；to 要留"
+  },
+  {
+   "q": "The smartphone ____ my father bought yesterday was cool but expensive.",
+   "o": [
+    "×",
+    "it",
+    "those",
+    "who"
+   ],
+   "a": 0,
+   "src": "段考卷第16回",
+   "tip": "受格關代可省略"
+  },
+  {
+   "q": "The boy ____ has a foreign-sounding name ____ from Germany.",
+   "o": [
+    "whose; comes",
+    "who; comes",
+    "who; come",
+    "whose; come"
+   ],
+   "a": 1,
+   "src": "段考卷第16回",
+   "tip": "主格關代用 who；The boy 單數 → comes"
+  },
+  {
+   "q": "The popcorn ____ Janet bought is delicious. Do you want some?",
+   "o": [
+    "who",
+    "what",
+    "which",
+    "whose"
+   ],
+   "a": 2,
+   "src": "段考卷第16回",
+   "tip": "popcorn 是物，受格關代用 which"
+  },
+  {
+   "q": "Vincent likes the girl ____ eyes are round and beautiful.",
+   "o": [
+    "which",
+    "that",
+    "who",
+    "whose"
+   ],
+   "a": 3,
+   "src": "段考卷第16回",
+   "tip": "girl 的眼睛 → whose + 名詞"
+  },
+  {
+   "q": "We took a picture of the dolphin ____ jumped out of the water to get food.",
+   "o": [
+    "which",
+    "×",
+    "where",
+    "who"
+   ],
+   "a": 0,
+   "src": "段考卷第16回",
+   "tip": "關代當主詞不可省略，動物用 which"
+  },
+  {
+   "q": "The plans Dan came up with ____ great, but it was hard to make them happen.",
+   "o": [
+    "was",
+    "were",
+    "did",
+    "does"
+   ],
+   "a": 1,
+   "src": "段考卷第16回",
+   "tip": "主詞 The plans 複數，過去式用 were"
+  },
+  {
+   "q": "I don't know ____ Betty's husband is. Is he the one ____ she talked with a few minutes ago?",
+   "o": [
+    "×; whose",
+    "whose; which",
+    "who; that",
+    "who; which"
+   ],
+   "a": 2,
+   "src": "段考卷第16回",
+   "tip": "間接問句 who…is；人當先行詞用 that"
+  },
+  {
+   "q": "A: Do you want to try the lollipop ____ last night?\nB: Sure. Is there anything special about it?",
+   "o": [
+    "and I bought",
+    "where I bought",
+    "I bought them",
+    "which I bought"
+   ],
+   "a": 3,
+   "src": "段考卷第16回",
+   "tip": "which 當受詞，不可再加 them"
+  },
+  {
+   "q": "Kate took me to ____ she was born. She also showed me many photos of her and her family.",
+   "o": [
+    "the hospital where",
+    "the hospital",
+    "the hospital that",
+    "whose hospital"
+   ],
+   "a": 0,
+   "src": "段考卷第16回",
+   "tip": "was born 後無介系詞 → 用 where"
+  },
+  {
+   "q": "A: Ian looks like a nice person.\nB: He really is. I've known him for over ten years. He's a person ____.",
+   "o": [
+    "which everyone likes",
+    "everyone likes to chat with",
+    "everyone likes to chat",
+    "where everyone likes"
+   ],
+   "a": 1,
+   "src": "段考卷第16回",
+   "tip": "chat with 某人，介系詞 with 要留句尾"
+  },
+  {
+   "q": "The comic book Rita lent me yesterday is the funniest one ____ I've ever read.",
+   "o": [
+    "this",
+    "what",
+    "×",
+    "who"
+   ],
+   "a": 2,
+   "src": "段考卷第17回",
+   "tip": "受格關代可省略"
+  },
+  {
+   "q": "The watch ____ Eric is looking for means a lot to him.",
+   "o": [
+    "who",
+    "whose",
+    "what",
+    "which"
+   ],
+   "a": 3,
+   "src": "段考卷第17回",
+   "tip": "watch 是物，受格關代用 which"
+  },
+  {
+   "q": "The girl ____ cellphone was missing looked sad.",
+   "o": [
+    "whose",
+    "her",
+    "that",
+    "who"
+   ],
+   "a": 0,
+   "src": "段考卷第17回",
+   "tip": "girl 的手機 → whose + 名詞"
+  },
+  {
+   "q": "Eddie really loves the gift ____ you gave him.",
+   "o": [
+    "to which",
+    "which",
+    "who",
+    "what"
+   ],
+   "a": 1,
+   "src": "段考卷第17回",
+   "tip": "gift 是物用 which；gave him 不需 to"
+  },
+  {
+   "q": "Vivian sent a card ____ she bought in the UK to her friends.",
+   "o": [
+    "they",
+    "what",
+    "that",
+    "them"
+   ],
+   "a": 2,
+   "src": "段考卷第17回",
+   "tip": "card 是物，用 that 引導關係子句"
+  },
+  {
+   "q": "The men that I talked to last night ____ my friends.",
+   "o": [
+    "is",
+    "have",
+    "was",
+    "are"
+   ],
+   "a": 3,
+   "src": "段考卷第18回",
+   "tip": "主詞 The men 複數 → are"
+  },
+  {
+   "q": "The guy ____ Amanda got a date with yesterday is a baseball player.",
+   "o": [
+    "×",
+    "which",
+    "whose",
+    "when"
+   ],
+   "a": 0,
+   "src": "段考卷第18回",
+   "tip": "受格關代可省略；人不用 which"
+  },
+  {
+   "q": "A: How can I comfort（安慰）a friend ____ pet dog died?\nB: I have no idea.",
+   "o": [
+    "who",
+    "whose",
+    "which",
+    "when"
+   ],
+   "a": 1,
+   "src": "段考卷第18回",
+   "tip": "朋友的狗 → whose + 名詞"
+  },
+  {
+   "q": "Betty is the girl ____ hair is very short.",
+   "o": [
+    "who",
+    "×",
+    "whose",
+    "which"
+   ],
+   "a": 2,
+   "src": "段考卷第18回",
+   "tip": "girl 的頭髮 → whose + 名詞"
+  },
+  {
+   "q": "Have you ever questioned if the report ____ you are reading is true?",
+   "o": [
+    "whose",
+    "whether",
+    "what",
+    "which"
+   ],
+   "a": 3,
+   "src": "段考卷第18回",
+   "tip": "report 是物，受格關代用 which"
+  },
+  {
+   "q": "Of all my classmates, Ben is the only one ____ I enjoy studying with before the exams.",
+   "o": [
+    "that",
+    "which",
+    "when",
+    "whose"
+   ],
+   "a": 0,
+   "src": "段考卷第18回",
+   "tip": "the only 修飾先行詞常用 that"
+  },
+  {
+   "q": "The book ____ I spent a lot of time reading ____ was bought by my aunt.",
+   "o": [
+    "which; on",
+    "that; ×",
+    "×; with",
+    "who; ×"
+   ],
+   "a": 1,
+   "src": "段考卷第18回",
+   "tip": "spend time V-ing 不需介系詞；物用 that"
+  },
+  {
+   "q": "The movie theater ____ I went ____ with you was on fire this morning.",
+   "o": [
+    "when; ×",
+    "where; to",
+    "which; to",
+    "that; ×"
+   ],
+   "a": 2,
+   "src": "段考卷第18回",
+   "tip": "go to 地方 → which…to"
+  },
+  {
+   "q": "The girl ____ Eric likes is beautiful and smart.",
+   "o": [
+    "she",
+    "which",
+    "what",
+    "×"
+   ],
+   "a": 3,
+   "src": "主題式測驗卷",
+   "tip": "受格關代可省略"
+  },
+  {
+   "q": "The computer game ____ you lent me yesterday is very interesting.",
+   "o": [
+    "that",
+    "it",
+    "what",
+    "who"
+   ],
+   "a": 0,
+   "src": "主題式測驗卷",
+   "tip": "物當先行詞，受格關代用 that"
+  },
+  {
+   "q": "The lady ____ is the boss of Zolli Candy.",
+   "o": [
+    "gave us some free samples",
+    "we are going to interview",
+    "will help us make plans",
+    "she will follow the rules"
+   ],
+   "a": 1,
+   "src": "主題式測驗卷",
+   "tip": "省略關代：we'll interview the lady"
+  },
+  {
+   "q": "The lady ____ to the clerk ____ fifty lemons.",
+   "o": [
+    "is talking; which has",
+    "that is talking; that needs",
+    "who is talking; needs",
+    "is talking; needs"
+   ],
+   "a": 2,
+   "src": "主題式測驗卷",
+   "tip": "who is talking 修飾；動詞 needs"
+  },
+  {
+   "q": "This is one of the thickest books ____ my father bought.",
+   "o": [
+    "who",
+    "whose",
+    "those",
+    "that"
+   ],
+   "a": 3,
+   "src": "主題式測驗卷",
+   "tip": "最高級修飾先行詞常用 that"
+  },
+  {
+   "q": "The jacket ____ she bought is more expensive than the coat ____ I'm wearing.",
+   "o": [
+    "which; that",
+    "that; what",
+    "which; what",
+    "who; who"
+   ],
+   "a": 0,
+   "src": "主題式測驗卷",
+   "tip": "物當先行詞用 which / that"
+  },
+  {
+   "q": "The birthday cake ____ Christine's husband prepared was delicious.",
+   "o": [
+    "it",
+    "which",
+    "what",
+    "this"
+   ],
+   "a": 1,
+   "src": "主題式測驗卷",
+   "tip": "cake 是物，受格關代用 which"
+  },
+  {
+   "q": "A: Do you know the woman ____ name is Kuo Hsing-chun? I like her so much.\nB: Is she the weightlifter（舉重選手）____ won a gold medal?",
+   "o": [
+    "her; ×",
+    "what; ×",
+    "whose; that",
+    "who; who"
+   ],
+   "a": 2,
+   "src": "主題式測驗卷",
+   "tip": "whose + name；主格關代 that 不可省"
+  },
+  {
+   "q": "Do you know the girl that we ____ last night?",
+   "o": [
+    "meet",
+    "meeting",
+    "meets",
+    "met"
+   ],
+   "a": 3,
+   "src": "主題式測驗卷",
+   "tip": "last night → 子句用過去式 met"
+  },
+  {
+   "q": "He is a person ____ I really admire.",
+   "o": [
+    "who",
+    "him",
+    "whose",
+    "he"
+   ],
+   "a": 0,
+   "src": "主題式測驗卷",
+   "tip": "person 是人，受格關代用 who(m)"
+  },
+  {
+   "q": "Haven't you found anything ____ you are interested in?",
+   "o": [
+    "it",
+    "×",
+    "they",
+    "what"
+   ],
+   "a": 1,
+   "src": "主題式測驗卷",
+   "tip": "受格關代可省略；不可用 what"
+  },
+  {
+   "q": "Jenny is the girl ____ I talked last night.",
+   "o": [
+    "who",
+    "whom",
+    "with whom",
+    "with what"
+   ],
+   "a": 2,
+   "src": "文法即時通",
+   "tip": "talk with 人；介系詞後用 whom"
+  },
+  {
+   "q": "The students that Ms. White ____ are polite and hard-working.",
+   "o": [
+    "is taught",
+    "are taught",
+    "teach",
+    "teaches"
+   ],
+   "a": 3,
+   "src": "文法即時通",
+   "tip": "子句主詞 Ms. White 單數 → teaches"
+  },
+  {
+   "q": "We couldn't find the park ____ we used to play in before.",
+   "o": [
+    "which",
+    "who",
+    "where",
+    "whose"
+   ],
+   "a": 0,
+   "src": "文法即時通",
+   "tip": "句尾有 in → 用 which；where 不可再加 in"
+  }
+ ],
+ "fix": [
+  {
+   "t": "Actor David Piper [[became tired of]] talking about the movie [[he is famous]] [[after he was]] interviewed about it many times.",
+   "e": 1,
+   "o": [
+    "he is famous for",
+    "that is famous for",
+    "that he is famous"
+   ],
+   "a": 0,
+   "src": "104會考 第12題",
+   "p": 0.3,
+   "trap": null,
+   "tip": "be famous for the movie，省略關代後介系詞 for 不可省"
+  },
+  {
+   "t": "Fiona [[loves listening to]] her children [[sing]] songs [[that learned]] at school.",
+   "e": 2,
+   "o": [
+    "are learned",
+    "they learned",
+    "that they are learned"
+   ],
+   "a": 1,
+   "src": "110會考 第12題",
+   "p": 0.43,
+   "trap": null,
+   "tip": "歌是孩子學的，子句需主詞：(that) they learned"
+  },
+  {
+   "t": "The comic book [[that I bought it]] last week [[was]] so funny that I [[have read]] it three times.",
+   "e": 0,
+   "o": [
+    "what I bought",
+    "which bought",
+    "that I bought"
+   ],
+   "a": 2,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "that 已代替受詞 book，子句內不可再用 it"
+  },
+  {
+   "t": "We [[enjoyed]] the movie [[who]] my brother [[recommended]].",
+   "e": 1,
+   "o": [
+    "which",
+    "whose",
+    "what"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "movie 是物，受格關代用 which/that，不用 who"
+  },
+  {
+   "t": "Do you [[remember]] the boy [[who's]] bike [[was stolen]] in front of the library?",
+   "e": 1,
+   "o": [
+    "who",
+    "whose",
+    "that"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "who's = who is；男孩的腳踏車 → whose + 名詞"
+  },
+  {
+   "t": "The singer [[who]] voice we heard on the radio [[is coming]] to our town [[next week]].",
+   "e": 0,
+   "o": [
+    "that",
+    "which",
+    "whose"
+   ],
+   "a": 2,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "歌手的聲音 → 所有格 whose + voice"
+  },
+  {
+   "t": "I [[can't stop]] eating the cookies my grandma [[make]] [[every]] Sunday.",
+   "e": 1,
+   "o": [
+    "makes",
+    "making",
+    "to make"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "子句主詞 my grandma 單數，習慣動作用 makes"
+  },
+  {
+   "t": "The shoes [[that]] my sister [[bought]] last week [[is]] too small for her.",
+   "e": 2,
+   "o": [
+    "was",
+    "are",
+    "being"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "主詞是 The shoes（複數），不是 sister → are"
+  },
+  {
+   "t": "The house [[that]] Mr. Lee [[lives]] [[has]] a big garden.",
+   "e": 1,
+   "o": [
+    "lives in it",
+    "living in",
+    "lives in"
+   ],
+   "a": 2,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "live in the house，介系詞 in 要留在句尾"
+  },
+  {
+   "t": "This is the park [[in that]] we [[used to]] play [[when]] we were kids.",
+   "e": 0,
+   "o": [
+    "in which",
+    "which",
+    "that"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "介系詞後不可接 that，要用 in which"
+  },
+  {
+   "t": "Have you [[called]] the girl [[I met her]] at the party [[yet]]?",
+   "e": 1,
+   "o": [
+    "whom met",
+    "I met",
+    "who I met her"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "省略的關代已當受詞，不可再加 her"
+  },
+  {
+   "t": "I [[wrote]] [[a card]] to the teacher [[which]] I like the most.",
+   "e": 2,
+   "o": [
+    "what",
+    "whose",
+    "who"
+   ],
+   "a": 2,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "teacher 是人，關代用 who/that，不用 which"
+  },
+  {
+   "t": "Jenny is the friend [[with that]] I [[went]] to the concert [[last Saturday]].",
+   "e": 0,
+   "o": [
+    "with whom",
+    "that",
+    "whom"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "介系詞後用 whom（人），不可用 that"
+  },
+  {
+   "t": "We stayed at a hotel [[which]] rooms [[were]] [[big and clean]].",
+   "e": 0,
+   "o": [
+    "that",
+    "whose",
+    "its"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "飯店的房間 → whose + rooms"
+  },
+  {
+   "t": "The pictures [[that]] Amy [[and her brother]] [[takes]] every summer are beautiful.",
+   "e": 2,
+   "o": [
+    "is taking",
+    "taking",
+    "take"
+   ],
+   "a": 2,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "子句主詞 Amy and her brother 複數 → take"
+  },
+  {
+   "t": "The cake I [[making]] for Mom's birthday [[was]] eaten [[by]] my dog.",
+   "e": 0,
+   "o": [
+    "made",
+    "to make",
+    "been made"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "省略 that 的子句需動詞：(that) I made"
+  },
+  {
+   "t": "The students [[that]] Ms. Wang [[teaches]] [[being]] very polite.",
+   "e": 2,
+   "o": [
+    "is",
+    "are",
+    "to be"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "主詞 The students 需主要動詞，複數 → are"
+  },
+  {
+   "t": "I [[still]] [[ride]] the bike [[who]] my dad gave me.",
+   "e": 2,
+   "o": [
+    "what",
+    "whose",
+    "which"
+   ],
+   "a": 2,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "bike 是物，關代用 which/that"
+  },
+  {
+   "t": "The man [[that]] you [[saw him]] at the bus stop [[is]] my uncle.",
+   "e": 1,
+   "o": [
+    "saw",
+    "seeing",
+    "see him"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "that 已當 saw 的受詞，不可重複 him"
+  },
+  {
+   "t": "This [[is]] [[the best]] movie [[what]] I have ever seen.",
+   "e": 2,
+   "o": [
+    "whose",
+    "that",
+    "who"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "what 前不可有先行詞；最高級後用 that"
+  },
+  {
+   "t": "I [[know]] a girl [[whose]] parents [[is]] both doctors.",
+   "e": 2,
+   "o": [
+    "being",
+    "be",
+    "are"
+   ],
+   "a": 2,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "whose 後主詞 parents 複數 → are"
+  },
+  {
+   "t": "Kevin is the boy [[whose]] we [[saw]] at the park [[yesterday]].",
+   "e": 0,
+   "o": [
+    "who",
+    "what",
+    "which"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "whose 後須接名詞；此處當受詞用 who(m)/that"
+  },
+  {
+   "t": "The letter [[which]] I [[write]] to you last week [[has]] finally arrived.",
+   "e": 1,
+   "o": [
+    "have written",
+    "wrote",
+    "writing"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "last week 過去時間 → wrote"
+  },
+  {
+   "t": "The chair [[you are sitting]] [[is]] [[broken]].",
+   "e": 0,
+   "o": [
+    "on that you are sitting",
+    "which you are sitting",
+    "you are sitting on"
+   ],
+   "a": 2,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "sit on the chair，介系詞 on 不可省"
+  }
+ ]
+}

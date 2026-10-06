@@ -1,0 +1,850 @@
+{
+ "grammar": [
+  {
+   "q": "Scott is tired ____ his job, so he decided to quit.",
+   "o": [
+    "in",
+    "for",
+    "of",
+    "with"
+   ],
+   "a": 2,
+   "src": "段考卷第3回",
+   "tip": "be tired of 對…厭煩"
+  },
+  {
+   "q": "John is really bored ____ playing the game with his brother.",
+   "o": [
+    "with",
+    "at",
+    "on",
+    "in"
+   ],
+   "a": 0,
+   "src": "段考卷第3回",
+   "tip": "be bored with 對…感到無聊"
+  },
+  {
+   "q": "Allie said she ____ me next weekend.",
+   "o": [
+    "has visited",
+    "visited",
+    "visits",
+    "would visit"
+   ],
+   "a": 3,
+   "src": "段考卷第3回",
+   "tip": "said 過去式，子句未來用 would + V"
+  },
+  {
+   "q": "This history book is ____. I've read it several times.",
+   "o": [
+    "interests",
+    "interest",
+    "interested",
+    "interesting"
+   ],
+   "a": 3,
+   "src": "段考卷第3回",
+   "tip": "物令人有趣 → V-ing：interesting"
+  },
+  {
+   "q": "I guess ____ the woman over there is Ian's mother. They look alike.",
+   "o": [
+    "this",
+    "what",
+    "×",
+    "if"
+   ],
+   "a": 2,
+   "src": "段考卷第3回",
+   "tip": "I guess (that) 子句，that 可省略"
+  },
+  {
+   "q": "Cindy feels ____ about the coming holiday. She has already made a plan for it.",
+   "o": [
+    "excite",
+    "excites",
+    "exciting",
+    "excited"
+   ],
+   "a": 3,
+   "src": "段考卷第3回",
+   "tip": "人感到興奮 → excited about"
+  },
+  {
+   "q": "The baby felt ____ and began to cry.",
+   "o": [
+    "scary",
+    "scared",
+    "scare",
+    "scares"
+   ],
+   "a": 1,
+   "src": "段考卷第3回",
+   "tip": "人感到害怕 → scared"
+  },
+  {
+   "q": "We called Rita several times, but she didn't answer. Jerry and I guess ____ she left her smartphone at home again.",
+   "o": [
+    "what",
+    "that",
+    "if",
+    "about"
+   ],
+   "a": 1,
+   "src": "段考卷第3回",
+   "tip": "guess that + 完整子句"
+  },
+  {
+   "q": "My sister told me ____ to take a shower.",
+   "o": [
+    "I want",
+    "that I wanted",
+    "that she want",
+    "she wanted"
+   ],
+   "a": 3,
+   "src": "段考卷第3回",
+   "tip": "told 過去式 → 子句用過去式 she wanted"
+  },
+  {
+   "q": "It's a ____ day. I just want to lie on the couch and do nothing.",
+   "o": [
+    "tired",
+    "tire",
+    "tires",
+    "tiring"
+   ],
+   "a": 3,
+   "src": "段考卷第3回",
+   "tip": "修飾事物「令人疲累的」→ tiring"
+  },
+  {
+   "q": "Do you know ____ the man in the picture is very rich?",
+   "o": [
+    "there",
+    "who",
+    "that",
+    "which"
+   ],
+   "a": 2,
+   "src": "段考卷第3回",
+   "tip": "know that + 完整子句"
+  },
+  {
+   "q": "Jenny said she ____ the floor after dinner, but she forgot to do that.",
+   "o": [
+    "mopped",
+    "would mop",
+    "is mopping",
+    "has mopped"
+   ],
+   "a": 1,
+   "src": "段考卷第3回",
+   "tip": "said 過去式，當時的未來 → would + V"
+  },
+  {
+   "q": "The haunted house looks so ____. I will never go into it.",
+   "o": [
+    "scared",
+    "scare",
+    "scary",
+    "scares"
+   ],
+   "a": 2,
+   "src": "段考卷第4回",
+   "tip": "事物令人害怕 → scary"
+  },
+  {
+   "q": "Taking care of kids is ____, and it takes patience.",
+   "o": [
+    "tiring",
+    "tires",
+    "tired",
+    "tire"
+   ],
+   "a": 0,
+   "src": "段考卷第4回",
+   "tip": "動名詞主詞令人疲累 → tiring"
+  },
+  {
+   "q": "Lina is ____ with eating the same food for lunch, so she'll try something new today.",
+   "o": [
+    "bore",
+    "bores",
+    "boring",
+    "bored"
+   ],
+   "a": 3,
+   "src": "段考卷第4回",
+   "tip": "人感到無聊 → be bored with"
+  },
+  {
+   "q": "Henry was ____ about dating the girl of his dreams.",
+   "o": [
+    "exciting",
+    "excite",
+    "excited",
+    "excites"
+   ],
+   "a": 2,
+   "src": "段考卷第4回",
+   "tip": "人感到興奮 → excited about"
+  },
+  {
+   "q": "Nina felt surprised ____ her grade. She didn't study hard for the test, but she did well on it.",
+   "o": [
+    "at",
+    "in",
+    "for",
+    "of"
+   ],
+   "a": 0,
+   "src": "段考卷第4回",
+   "tip": "be/feel surprised at 對…感到驚訝"
+  },
+  {
+   "q": "My parents were very happy when they heard ____ my team won the baseball game.",
+   "o": [
+    "about",
+    "that",
+    "which",
+    "this"
+   ],
+   "a": 1,
+   "src": "段考卷第4回",
+   "tip": "heard that + 完整子句"
+  },
+  {
+   "q": "Lydia is ____ to find that her two-year-old son is able to count from one to ten.",
+   "o": [
+    "surprised",
+    "surprising",
+    "surprise",
+    "surprises"
+   ],
+   "a": 0,
+   "src": "段考卷第4回",
+   "tip": "人感到驚訝 → surprised to V"
+  },
+  {
+   "q": "My father said that it ____ rainy the next day.",
+   "o": [
+    "would be",
+    "being",
+    "is going to",
+    "will be"
+   ],
+   "a": 0,
+   "src": "段考卷第4回",
+   "tip": "said 過去式＋隔天 → would be"
+  },
+  {
+   "q": "I can't believe ____ Karen ____ angry with me. I will never talk to her again.",
+   "o": [
+    "that; getting",
+    "it; got",
+    "that; got",
+    "it; gets"
+   ],
+   "a": 2,
+   "src": "段考卷第4回",
+   "tip": "believe that + 主詞 + 動詞"
+  },
+  {
+   "q": "Mary thinks ____ the show is ____. So, she doesn't want to come with us.",
+   "o": [
+    "that; bored",
+    "×; boring",
+    "×; bored",
+    "if; boring"
+   ],
+   "a": 1,
+   "src": "段考卷第4回",
+   "tip": "that 可省略；節目令人無聊 → boring"
+  },
+  {
+   "q": "A: Do you mind ____ the window for me? It's hot here.\nB: No problem.",
+   "o": [
+    "opened",
+    "to open",
+    "open",
+    "opening"
+   ],
+   "a": 3,
+   "src": "段考卷第5回",
+   "tip": "mind + V-ing"
+  },
+  {
+   "q": "That man is ____. No one is ____ in talking to him.",
+   "o": [
+    "bored; interesting",
+    "boring; interested",
+    "boring; interest",
+    "bored; interest"
+   ],
+   "a": 1,
+   "src": "段考卷第5回",
+   "tip": "令人無聊 boring；感興趣 interested in"
+  },
+  {
+   "q": "Sandy is scared ____ ghosts, so she ____ never watched any horror movies.",
+   "o": [
+    "of; has",
+    "of; is",
+    "with; has",
+    "with; is"
+   ],
+   "a": 0,
+   "src": "段考卷第5回",
+   "tip": "be scared of；never 用現在完成式"
+  },
+  {
+   "q": "Jack thought ____ his mom was happy because he sent her a gift.",
+   "o": [
+    "that",
+    "it",
+    "this",
+    "what"
+   ],
+   "a": 0,
+   "src": "段考卷第5回",
+   "tip": "thought that + 完整子句"
+  },
+  {
+   "q": "Sam told us he ____ turn off the fan later, but he didn't.",
+   "o": [
+    "would",
+    "was going",
+    "will",
+    "is going"
+   ],
+   "a": 0,
+   "src": "段考卷第6回",
+   "tip": "told 過去式 → would + V"
+  },
+  {
+   "q": "Olivia is tired of ____ food delivery every day. She has planned to try cooking tonight.",
+   "o": [
+    "ordering",
+    "order",
+    "orders",
+    "ordered"
+   ],
+   "a": 0,
+   "src": "段考卷第6回",
+   "tip": "介系詞 of 後接 V-ing"
+  },
+  {
+   "q": "My mom said ____ she was tired and needed a break.",
+   "o": [
+    "which",
+    "×",
+    "this",
+    "it"
+   ],
+   "a": 1,
+   "src": "段考卷第6回",
+   "tip": "said (that) 子句，that 可省略"
+  },
+  {
+   "q": "Going rock climbing sounds ____. We are ____ about it.",
+   "o": [
+    "excited; exciting",
+    "exciting; excited",
+    "exciting; exciting",
+    "excited; excited"
+   ],
+   "a": 1,
+   "src": "段考卷第6回",
+   "tip": "事 exciting；人 excited about"
+  },
+  {
+   "q": "All my family were surprised ____ the bad news.",
+   "o": [
+    "in",
+    "of",
+    "at",
+    "with"
+   ],
+   "a": 2,
+   "src": "段考卷第6回",
+   "tip": "be surprised at + 事物"
+  },
+  {
+   "q": "Patty told me ____ this book was very interesting.",
+   "o": [
+    "what",
+    "about",
+    "that",
+    "to"
+   ],
+   "a": 2,
+   "src": "主題式測驗卷",
+   "tip": "told me that + 完整子句"
+  },
+  {
+   "q": "A: Let's watch A Quiet Place.\nB: No, the movie is too ____. I won't be able to sleep if I watch it.",
+   "o": [
+    "scare",
+    "scary",
+    "scares",
+    "scared"
+   ],
+   "a": 1,
+   "src": "主題式測驗卷",
+   "tip": "電影令人害怕 → scary"
+  },
+  {
+   "q": "A: The baseball game last night was ____.\nB: Yeah. The Lion team won the game in the last minute.",
+   "o": [
+    "exciting",
+    "excited",
+    "excites",
+    "excite"
+   ],
+   "a": 0,
+   "src": "主題式測驗卷",
+   "tip": "比賽令人興奮 → exciting"
+  },
+  {
+   "q": "Mr. Chang said ____ his wife was the most important person in his life.",
+   "o": [
+    "this",
+    "which",
+    "what",
+    "that"
+   ],
+   "a": 3,
+   "src": "主題式測驗卷",
+   "tip": "said that + 完整子句"
+  },
+  {
+   "q": "A: Why are you going to change the light bulb? It still works well.\nB: Because it's not bright enough. My eyes ____ easily when I read.",
+   "o": [
+    "tiring",
+    "are tiring",
+    "get tired",
+    "tired"
+   ],
+   "a": 2,
+   "src": "主題式測驗卷",
+   "tip": "眼睛感到疲累 → get tired"
+  },
+  {
+   "q": "A: Does he know ____ come back from Japan?\nB: I don't think so.",
+   "o": [
+    "we already",
+    "have we",
+    "that have we",
+    "we have"
+   ],
+   "a": 3,
+   "src": "主題式測驗卷",
+   "tip": "名詞子句用直述句語序：we have"
+  },
+  {
+   "q": "Mopping the floor is really tiring ____ me.",
+   "o": [
+    "at",
+    "on",
+    "to",
+    "in"
+   ],
+   "a": 2,
+   "src": "主題式測驗卷",
+   "tip": "事物 + be tiring to + 人"
+  },
+  {
+   "q": "The kids are ____ with the movie. It's ____ to them.",
+   "o": [
+    "boring; boring",
+    "bored; boring",
+    "bored; bored",
+    "boring; bored"
+   ],
+   "a": 1,
+   "src": "主題式測驗卷",
+   "tip": "人 bored with；電影 boring to 人"
+  },
+  {
+   "q": "Do you mind ____ the door for me? My hands are full.",
+   "o": [
+    "open",
+    "to open",
+    "opened",
+    "opening"
+   ],
+   "a": 3,
+   "src": "主題式測驗卷",
+   "tip": "mind + V-ing"
+  }
+ ],
+ "fix": [
+  {
+   "t": "Josh [[has planned]] to make a trip to New York next month and [[visiting]] some of his friends [[there]].",
+   "e": 1,
+   "o": [
+    "visit",
+    "visits",
+    "visited"
+   ],
+   "a": 0,
+   "src": "109會考 第12題",
+   "p": 0.34,
+   "trap": null,
+   "tip": "and 連接 to make 與 (to) visit，須用原形 visit"
+  },
+  {
+   "t": "[[Taking]] a map [[with you]] when you go to a place [[for the first time]].",
+   "e": 0,
+   "o": [
+    "Have taken",
+    "Take",
+    "To take"
+   ],
+   "a": 1,
+   "src": "106會考 第11題",
+   "p": 0.53,
+   "trap": null,
+   "tip": "句子缺主要動詞，這是祈使句，須用原形 Take 開頭"
+  },
+  {
+   "t": "My cat [[got excited]] when it [[saw]] the boy [[to catch]] the birds.",
+   "e": 2,
+   "o": [
+    "caught",
+    "catches",
+    "catching"
+   ],
+   "a": 2,
+   "src": "105會考 第3題",
+   "p": 0.56,
+   "trap": null,
+   "tip": "see + 人 + V-ing（正在做），不用 to V"
+  },
+  {
+   "t": "People got very [[excited]] when [[they]] watched Ms. Smith [[danced]] at the party.",
+   "e": 2,
+   "o": [
+    "dancing",
+    "has danced",
+    "to dance"
+   ],
+   "a": 0,
+   "src": "112會考 第4題",
+   "p": 0.6,
+   "trap": 18.35,
+   "tip": "watch + 人 + V-ing/原形，不用過去式 danced"
+  },
+  {
+   "t": "Cindy enjoys [[listen to]] her dad [[read]] stories [[to her]] before bed.",
+   "e": 0,
+   "o": [
+    "listens to",
+    "listening to",
+    "to listen to"
+   ],
+   "a": 1,
+   "src": "114會考 第4題",
+   "p": 0.61,
+   "trap": 22.5,
+   "tip": "enjoy + V-ing；listen to 人 + 原形 read 正確"
+  },
+  {
+   "t": "Jo won't be happy if [[you're]] late for his party tonight, so [[to make]] sure that you [[arrive]] on time.",
+   "e": 1,
+   "o": [
+    "is making",
+    "makes",
+    "make"
+   ],
+   "a": 2,
+   "src": "114會考 第11題",
+   "p": 0.61,
+   "trap": 16.84,
+   "tip": "so 後是祈使句，用原形 make"
+  },
+  {
+   "t": "If you're [[interested in]] our business plan, [[to call]] this number and [[ask for]] Ms. Lee. She'll answer your questions.",
+   "e": 1,
+   "o": [
+    "call",
+    "and call",
+    "calling"
+   ],
+   "a": 0,
+   "src": "110會考 第9題",
+   "p": 0.62,
+   "trap": null,
+   "tip": "主要子句是祈使句，用原形 call 開頭"
+  },
+  {
+   "t": "Although it [[took]] me lots of time [[prepared]] a big meal for ten people, I was happy [[that]] everyone enjoyed it.",
+   "e": 1,
+   "o": [
+    "preparing",
+    "to prepare",
+    "prepare"
+   ],
+   "a": 1,
+   "src": "111會考 第8題",
+   "p": 0.64,
+   "trap": 15.83,
+   "tip": "It takes + 人 + 時間 + to V"
+  },
+  {
+   "t": "Our school basketball team [[won]] the national game [[last night]]. We are so [[popular with]] them.",
+   "e": 2,
+   "o": [
+    "sorry for",
+    "worried about",
+    "proud of"
+   ],
+   "a": 2,
+   "src": "113會考 第3題",
+   "p": 0.72,
+   "trap": 13.12,
+   "tip": "球隊贏了，我們以他們為傲 → be proud of"
+  },
+  {
+   "t": "Jill is [[excited]] that the city park [[is closed]] for the music festival because now she [[can't jog]] there.",
+   "e": 0,
+   "o": [
+    "unhappy",
+    "proud",
+    "scared"
+   ],
+   "a": 0,
+   "src": "110會考 第3題",
+   "p": 0.75,
+   "trap": null,
+   "tip": "不能去慢跑，應該是不開心 unhappy"
+  },
+  {
+   "t": "The movie was [[so long]] that many people [[fell asleep]]. Even my dad felt [[boring]] and left early.",
+   "e": 2,
+   "o": [
+    "bores",
+    "bored",
+    "bore"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "人「感到」無聊用 bored；boring 是令人無聊"
+  },
+  {
+   "t": "Kevin was [[surprising]] at the news [[that]] his best friend [[was moving]] to Japan.",
+   "e": 0,
+   "o": [
+    "surprise",
+    "surprises",
+    "surprised"
+   ],
+   "a": 2,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "人感到驚訝 → be surprised at"
+  },
+  {
+   "t": "Mom [[said]] that she [[will cook]] beef noodles for us [[that night]], but she was too tired.",
+   "e": 1,
+   "o": [
+    "would cook",
+    "has cooked",
+    "cooks"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "said 過去式，子句的未來要用 would + V"
+  },
+  {
+   "t": "Until I met him [[yesterday]], I didn't know [[what]] Amy [[had]] a little brother.",
+   "e": 1,
+   "o": [
+    "about",
+    "that",
+    "which"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "know 後接完整子句用 that，what 須缺主詞或受詞"
+  },
+  {
+   "t": "After [[climbing]] the mountain for five hours, we were all very [[hungry]] and [[tiring]].",
+   "e": 2,
+   "o": [
+    "tires",
+    "tire",
+    "tired"
+   ],
+   "a": 2,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "人感到疲累 → tired；tiring 是令人疲累"
+  },
+  {
+   "t": "Since he [[was]] a child, Tom [[has been]] interested [[on]] science.",
+   "e": 2,
+   "o": [
+    "in",
+    "with",
+    "at"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "be interested in 對…有興趣"
+  },
+  {
+   "t": "Ken is scared [[with]] big dogs, so he always [[walks]] on the other side of the street when he [[sees]] one.",
+   "e": 0,
+   "o": [
+    "on",
+    "of",
+    "for"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "be scared of 害怕…"
+  },
+  {
+   "t": "Do you mind [[to turn]] down the music? I [[am trying]] to study for [[tomorrow's]] test.",
+   "e": 0,
+   "o": [
+    "turn",
+    "turned",
+    "turning"
+   ],
+   "a": 2,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "mind 後接動名詞：mind + V-ing"
+  },
+  {
+   "t": "My brother [[thinks]] that horror movies are [[excited]], but I [[get]] scared when I watch them.",
+   "e": 1,
+   "o": [
+    "exciting",
+    "excites",
+    "excite"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "電影「令人」興奮 → exciting"
+  },
+  {
+   "t": "Lisa told me she [[is]] busy yesterday, so she [[couldn't]] come to my party [[on time]].",
+   "e": 0,
+   "o": [
+    "has been",
+    "was",
+    "will be"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "told 過去式＋yesterday → 子句用過去式 was"
+  },
+  {
+   "t": "The news was [[surprised]] to everyone, so people [[talked]] about it [[all day]].",
+   "e": 0,
+   "o": [
+    "surprises",
+    "surprise",
+    "surprising"
+   ],
+   "a": 2,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "事物令人驚訝 → be surprising to 人"
+  },
+  {
+   "t": "All the students [[listen]] to Mr. Wang [[carefully]] because his history class is [[interested]].",
+   "e": 2,
+   "o": [
+    "interesting",
+    "interests",
+    "interest"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "課程「令人」有趣 → interesting"
+  },
+  {
+   "t": "Our teacher [[told]] us [[what]] the earth [[goes]] around the sun.",
+   "e": 1,
+   "o": [
+    "about",
+    "that",
+    "which"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "子句完整用 that；不變的事實仍用現在式 goes"
+  },
+  {
+   "t": "Last week I thought Ben [[can]] fix my computer, but he [[didn't]] even know how [[to turn]] it on.",
+   "e": 0,
+   "o": [
+    "has",
+    "is able",
+    "could"
+   ],
+   "a": 2,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "thought 過去式，子句助動詞改過去式 could"
+  },
+  {
+   "t": "The kids [[were]] so [[exciting]] about the trip that they [[couldn't]] sleep last night.",
+   "e": 1,
+   "o": [
+    "excited",
+    "excites",
+    "excite"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "人感到興奮 → be excited about"
+  },
+  {
+   "t": "We heard that Mr. Lin [[gets]] married last month, and we [[were]] all happy [[for]] him.",
+   "e": 0,
+   "o": [
+    "has gotten",
+    "got",
+    "will get"
+   ],
+   "a": 1,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "last month 是過去時間，用過去式 got"
+  }
+ ]
+}

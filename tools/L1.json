@@ -1,0 +1,876 @@
+{
+ "grammar": [
+  {
+   "q": "Debbie: Let’s eat out tonight.\nTom: OK, but I ____ cleaning the kitchen yet. Can we go later?",
+   "o": [
+    "haven’t finished",
+    "hasn’t finished",
+    "won’t finish",
+    "don’t finish"
+   ],
+   "a": 0,
+   "src": "段考卷第1回",
+   "tip": "主詞 I + yet → haven’t finished"
+  },
+  {
+   "q": "Jerry has worked in Tainan ____ 1999.",
+   "o": [
+    "from",
+    "since",
+    "for",
+    "in"
+   ],
+   "a": 1,
+   "src": "段考卷第1回",
+   "tip": "since + 時間點（1999）"
+  },
+  {
+   "q": "Janet ____ to Kenting before, but she will go there this weekend.",
+   "o": [
+    "won’t go",
+    "never gone",
+    "has never been",
+    "has never gone"
+   ],
+   "a": 2,
+   "src": "段考卷第1回",
+   "tip": "去過（經驗）用 have been to"
+  },
+  {
+   "q": "Harry has kept the habit of jogging thirty minutes a day ____ ten years.",
+   "o": [
+    "from",
+    "with",
+    "since",
+    "for"
+   ],
+   "a": 3,
+   "src": "段考卷第1回",
+   "tip": "for + 一段時間（ten years）"
+  },
+  {
+   "q": "Ann: Have you ever cooked fish ____?\nZoe: No, I haven’t.",
+   "o": [
+    "before",
+    "ago",
+    "already",
+    "yet"
+   ],
+   "a": 0,
+   "src": "段考卷第1回",
+   "tip": "ever…before 問經驗；ago 用過去式"
+  },
+  {
+   "q": "Beth has been an actress ____ 2000. She’s been in many movies and TV shows.",
+   "o": [
+    "with",
+    "since",
+    "for",
+    "from"
+   ],
+   "a": 1,
+   "src": "段考卷第1回",
+   "tip": "since + 時間點（2000）"
+  },
+  {
+   "q": "John ____ his homework yet, so he can’t go to the movies with us.",
+   "o": [
+    "has done",
+    "is doing",
+    "hasn’t done",
+    "did"
+   ],
+   "a": 2,
+   "src": "段考卷第1回",
+   "tip": "yet 用於否定句，還沒做完 → hasn’t done"
+  },
+  {
+   "q": "Irene: ____ have you lived here?\nDavid: For five years.",
+   "o": [
+    "How often",
+    "How many",
+    "How old",
+    "How long"
+   ],
+   "a": 3,
+   "src": "段考卷第1回",
+   "tip": "回答 for + 時間 → 問 How long"
+  },
+  {
+   "q": "I ____ to the USA last April.",
+   "o": [
+    "went",
+    "has gone",
+    "was going",
+    "have been"
+   ],
+   "a": 0,
+   "src": "段考卷第1回",
+   "tip": "last April 過去時間 → 過去式 went"
+  },
+  {
+   "q": "I’ve already watched the movie, but my little brother ____.",
+   "o": [
+    "wasn’t",
+    "hasn’t",
+    "didn’t",
+    "isn’t"
+   ],
+   "a": 1,
+   "src": "段考卷第1回",
+   "tip": "承前句現在完成式 → hasn’t (watched)"
+  },
+  {
+   "q": "William has ____ the UK. He will arrive there tomorrow morning.",
+   "o": [
+    "been to",
+    "going to",
+    "gone to",
+    "went to"
+   ],
+   "a": 2,
+   "src": "段考卷第1回",
+   "tip": "人還在路上沒回來 → has gone to"
+  },
+  {
+   "q": "That was two hours ____. Why didn’t you call me?",
+   "o": [
+    "since",
+    "yet",
+    "ever",
+    "ago"
+   ],
+   "a": 3,
+   "src": "段考卷第1回克漏字",
+   "tip": "兩小時「前」→ two hours ago"
+  },
+  {
+   "q": "I can’t eat anymore. I ____ three hamburgers so far.",
+   "o": [
+    "have had",
+    "have",
+    "am having",
+    "has"
+   ],
+   "a": 0,
+   "src": "段考卷第2回",
+   "tip": "so far 到目前為止 → 現在完成式 have had"
+  },
+  {
+   "q": "Alex ____ English for more than ten years. He started to learn it when he was five.",
+   "o": [
+    "is learning",
+    "has learned",
+    "have learned",
+    "learns"
+   ],
+   "a": 1,
+   "src": "段考卷第2回",
+   "tip": "for 十多年且持續到現在；Alex 單數 → has"
+  },
+  {
+   "q": "A: May I speak to Thomas?\nB: I’m sorry. He’s not here. He ____ to the USA on a business trip.",
+   "o": [
+    "have been",
+    "gone",
+    "has gone",
+    "was gone"
+   ],
+   "a": 2,
+   "src": "段考卷第2回",
+   "tip": "人不在這裡、已去美國 → has gone to"
+  },
+  {
+   "q": "A: Have the girls finished the housework?\nB: ____, they ____. They are still mopping the floor.",
+   "o": [
+    "No; aren’t",
+    "Yes; have",
+    "Yes; did",
+    "No; haven’t"
+   ],
+   "a": 3,
+   "src": "段考卷第2回",
+   "tip": "還在拖地 → 否定；Have 問句用 haven’t 答"
+  },
+  {
+   "q": "Although Owen knows a lot about the UK, he has never ____ there before.",
+   "o": [
+    "been",
+    "be",
+    "gone",
+    "went"
+   ],
+   "a": 0,
+   "src": "段考卷第2回",
+   "tip": "從沒去過（經驗）→ has never been there"
+  },
+  {
+   "q": "Bill had a car accident last Sunday. He has stayed in the hospital ____ then.",
+   "o": [
+    "on",
+    "since",
+    "for",
+    "by"
+   ],
+   "a": 1,
+   "src": "段考卷第2回",
+   "tip": "since then 從那時起"
+  },
+  {
+   "q": "A: ____ have you and your wife known each other?\nB: For twenty years.",
+   "o": [
+    "How soon",
+    "How old",
+    "How long",
+    "How often"
+   ],
+   "a": 2,
+   "src": "段考卷第2回",
+   "tip": "回答 for twenty years → How long"
+  },
+  {
+   "q": "The old man has lived in this small town since ____. He never leaves or moves to other places.",
+   "o": [
+    "60 years",
+    "a little boy",
+    "50 years ago",
+    "1942"
+   ],
+   "a": 3,
+   "src": "段考卷第2回",
+   "tip": "since 後接時間點 → 1942"
+  },
+  {
+   "q": "Meg and Jenny haven’t rowed a boat ____, but they have always wanted to.",
+   "o": [
+    "yet",
+    "once",
+    "ago",
+    "already"
+   ],
+   "a": 0,
+   "src": "段考卷第5回",
+   "tip": "否定句「還沒」→ yet"
+  },
+  {
+   "q": "A: Have you bought the book?\nB: No, but we ____ it this evening.",
+   "o": [
+    "bought",
+    "will buy",
+    "buy",
+    "have bought"
+   ],
+   "a": 1,
+   "src": "段考卷第5回",
+   "tip": "this evening 未來 → will buy"
+  },
+  {
+   "q": "A: Have you ever ____ this type of hairdryer?\nB: No, I ____.",
+   "o": [
+    "using; don’t",
+    "used; don’t",
+    "used; haven’t",
+    "using; haven’t"
+   ],
+   "a": 2,
+   "src": "段考卷第5回",
+   "tip": "Have…p.p.? → No, I haven’t."
+  },
+  {
+   "q": "Sandy is scared ____ ghosts, so she ____ never watched any horror movies.",
+   "o": [
+    "of; is",
+    "with; has",
+    "with; is",
+    "of; has"
+   ],
+   "a": 3,
+   "src": "段考卷第5回",
+   "tip": "be scared of；has never + p.p."
+  },
+  {
+   "q": "Mr. Lin has taught in this junior high school ____ seven years.",
+   "o": [
+    "for",
+    "in",
+    "during",
+    "since"
+   ],
+   "a": 0,
+   "src": "段考卷第5回",
+   "tip": "for + 一段時間（seven years）"
+  },
+  {
+   "q": "Federer is an excellent tennis player. He ____ 20 Grand Slams since 2003.",
+   "o": [
+    "would win",
+    "has won",
+    "was winning",
+    "will win"
+   ],
+   "a": 1,
+   "src": "段考卷第5回",
+   "tip": "since 2003 到現在 → has won"
+  },
+  {
+   "q": "A: Have you been to America before?\nB: ____ And I’m planning to go there again.",
+   "o": [
+    "No, I haven’t.",
+    "Yes, I do.",
+    "Yes, I have.",
+    "No, I don’t."
+   ],
+   "a": 2,
+   "src": "段考卷第5回",
+   "tip": "要「再」去 → 去過 → Yes, I have."
+  },
+  {
+   "q": "A: Have you finished your homework?\nB: ____ I still have a report to do.",
+   "o": [
+    "Yes, I did.",
+    "No, I don’t.",
+    "Yes, I have.",
+    "No, I haven’t."
+   ],
+   "a": 3,
+   "src": "段考卷第6回",
+   "tip": "還有報告要做 → No, I haven’t."
+  },
+  {
+   "q": "Wesley has studied for the final exam ____ last month. He really spends a lot of time preparing for it.",
+   "o": [
+    "since",
+    "by",
+    "about",
+    "for"
+   ],
+   "a": 0,
+   "src": "段考卷第6回",
+   "tip": "since + last month（時間點）"
+  },
+  {
+   "q": "A: The kids have seen a tiger before, right?\nB: ____. I took them to the zoo last month.",
+   "o": [
+    "No, they haven’t.",
+    "Yes, they have.",
+    "Yes, they do.",
+    "No, they don’t."
+   ],
+   "a": 1,
+   "src": "段考卷第6回",
+   "tip": "上月帶去動物園 → 看過 Yes, they have."
+  },
+  {
+   "q": "Kim isn’t in Taipei now. She ____ to Tainan to visit her grandparents.",
+   "o": [
+    "gone",
+    "was going",
+    "has gone",
+    "has been"
+   ],
+   "a": 2,
+   "src": "段考卷第6回",
+   "tip": "人不在台北、去了台南 → has gone to"
+  },
+  {
+   "q": "A: ____ you ever ____ this movie before?\nB: No. But I’ll see it this weekend.",
+   "o": [
+    "Are; seeing",
+    "Do; see",
+    "Will; see",
+    "Have; seen"
+   ],
+   "a": 3,
+   "src": "段考卷第6回",
+   "tip": "ever…before 問經驗 → Have…seen"
+  },
+  {
+   "q": "I ____ the meal. Please take the knife and fork away and clean up the table.",
+   "o": [
+    "have finished",
+    "was finishing",
+    "will finish",
+    "could finish"
+   ],
+   "a": 0,
+   "src": "主題式測驗卷",
+   "tip": "已經吃完（結果影響現在）→ have finished"
+  },
+  {
+   "q": "____ you ever heard of Chris Pratt? He is a famous actor.",
+   "o": [
+    "Are",
+    "Have",
+    "Will",
+    "Do"
+   ],
+   "a": 1,
+   "src": "主題式測驗卷",
+   "tip": "heard 是 p.p. → Have…heard"
+  },
+  {
+   "q": "A: Would you like a glass of juice?\nB: No, thanks. I ____ three glasses of it.",
+   "o": [
+    "drink",
+    "am drinking",
+    "have drunk",
+    "will drink"
+   ],
+   "a": 2,
+   "src": "主題式測驗卷",
+   "tip": "已喝了三杯 → have drunk"
+  },
+  {
+   "q": "The church has been there ____ the early 1910s.",
+   "o": [
+    "to",
+    "for",
+    "in",
+    "since"
+   ],
+   "a": 3,
+   "src": "主題式測驗卷",
+   "tip": "since + 時間點（1910 年代初）"
+  },
+  {
+   "q": "Jack and I have known each other ____ twenty years. We are old friends.",
+   "o": [
+    "for",
+    "since",
+    "ago",
+    "in"
+   ],
+   "a": 0,
+   "src": "主題式測驗卷",
+   "tip": "for + 一段時間（twenty years）"
+  },
+  {
+   "q": "A: ____ have you listened to the radio?\nB: For an hour.",
+   "o": [
+    "When",
+    "How long",
+    "What time",
+    "How often"
+   ],
+   "a": 1,
+   "src": "主題式測驗卷",
+   "tip": "回答 for an hour → How long"
+  },
+  {
+   "q": "Everyone ____ the classroom except Jane. She ____ still studying there.",
+   "o": [
+    "leaves; has been",
+    "has left; has been",
+    "has left; is",
+    "left; has"
+   ],
+   "a": 2,
+   "src": "主題式測驗卷",
+   "tip": "Everyone 單數 has left；正在讀 is"
+  },
+  {
+   "q": "That woman has ____ cut the vegetables, but she hasn’t cooked them ____.",
+   "o": [
+    "yet; already",
+    "yet; yet",
+    "already; already",
+    "already; yet"
+   ],
+   "a": 3,
+   "src": "主題式測驗卷",
+   "tip": "肯定句 already；否定句句尾 yet"
+  },
+  {
+   "q": "Ray ____ the American restaurant many times, and he likes the food there.",
+   "o": [
+    "has been to",
+    "goes to",
+    "has gone to",
+    "been to"
+   ],
+   "a": 0,
+   "src": "主題式測驗卷",
+   "tip": "去過很多次（經驗）→ has been to"
+  }
+ ],
+ "fix": [
+  {
+   "t": "Ariel [[has studied]] every night [[for a week]] before her Chinese test and [[got]] a very good grade.",
+   "e": 0,
+   "o": [
+    "studied",
+    "studies",
+    "was going to study"
+   ],
+   "a": 0,
+   "src": "111會考 第19題",
+   "p": 0.35,
+   "trap": 33.54,
+   "tip": "考試已結束（got 過去式），讀書也是過去的事 → 用過去式 studied"
+  },
+  {
+   "t": "I [[have practiced]] swimming for several years [[before]] I went to this high school. I [[gave]] it up because of heavy schoolwork.",
+   "e": 0,
+   "o": [
+    "am practicing",
+    "practiced",
+    "would practice"
+   ],
+   "a": 1,
+   "src": "112會考 第20題",
+   "p": 0.36,
+   "trap": 44.44,
+   "tip": "上高中前練、後來放棄了，與現在無關 → 過去式 practiced"
+  },
+  {
+   "t": "The new medicine [[that]] just [[came out]] on the market [[to save]] thousands of lives.",
+   "e": 2,
+   "o": [
+    "and saved",
+    "has saved",
+    "saving"
+   ],
+   "a": 1,
+   "src": "112會考 第22題",
+   "p": 0.47,
+   "trap": 20.01,
+   "tip": "that 子句只修飾主詞，句子還缺主要動詞 → has saved"
+  },
+  {
+   "t": "Now I often [[think of]] those days with Pip, my pet dog. When I [[read]] in my room, he [[will come and sit]] quietly beside me.",
+   "e": 2,
+   "o": [
+    "comes and sits",
+    "has come and sat",
+    "used to come and sit"
+   ],
+   "a": 2,
+   "src": "112會考 第23題",
+   "p": 0.45,
+   "trap": 22.58,
+   "tip": "回憶過去習慣（those days）→ used to come and sit"
+  },
+  {
+   "t": "[[I’ve wanted]] to read The Diary of a Young Girl [[for months]], [[until]] today I finally borrowed the book from the library.",
+   "e": 2,
+   "o": [
+    "and",
+    "since",
+    "so"
+   ],
+   "a": 0,
+   "src": "107會考 第15題",
+   "p": 0.22,
+   "trap": null,
+   "tip": "想讀好幾個月，今天終於借到，兩件事順接 → and"
+  },
+  {
+   "t": "The weather [[had been]] rainy and cloudy in the last few days. I [[hope]] the sun [[will come out]] soon.",
+   "e": 0,
+   "o": [
+    "has been",
+    "will be",
+    "would be"
+   ],
+   "a": 0,
+   "src": "106會考 第12題",
+   "p": 0.46,
+   "trap": null,
+   "tip": "最近幾天持續到現在 → 現在完成式 has been"
+  },
+  {
+   "t": "B&J Café [[has been]] known [[as]] the tallest building in town. However, O&G Restaurant [[became]] the tallest building in 2010.",
+   "e": 0,
+   "o": [
+    "had been",
+    "is",
+    "would be"
+   ],
+   "a": 0,
+   "src": "104會考 第11題",
+   "p": 0.55,
+   "trap": null,
+   "tip": "2010 年前一直是最高、現在已不是 → 過去完成式 had been"
+  },
+  {
+   "t": "Dad: [[Have you brushed]] your teeth [[yet]]?\nAnn: No, but I [[have]] before I go to bed.",
+   "e": 2,
+   "o": [
+    "haven’t",
+    "won’t",
+    "will"
+   ],
+   "a": 2,
+   "src": "107會考 第8題",
+   "p": 0.56,
+   "trap": null,
+   "tip": "睡前「將會」刷 → will；have 表已刷過，與 No 矛盾"
+  },
+  {
+   "t": "Yesterday when I [[got]] home from work, my brother [[went out]] for dinner, so he [[invited]] me to join him.",
+   "e": 1,
+   "o": [
+    "goes out",
+    "has gone out",
+    "was going out"
+   ],
+   "a": 2,
+   "src": "111會考 第13題",
+   "p": 0.59,
+   "trap": 18.95,
+   "tip": "我到家時哥哥「正要」出門吃飯，才能邀我 → was going out"
+  },
+  {
+   "t": "Tom [[was losing]] ten pounds [[over the past]] two months. He [[looks]] much thinner now.",
+   "e": 0,
+   "o": [
+    "loses",
+    "has lost",
+    "will lose"
+   ],
+   "a": 1,
+   "src": "104會考 第6題",
+   "p": 0.58,
+   "trap": null,
+   "tip": "過去兩個月累積到現在的結果 → has lost"
+  },
+  {
+   "t": "Do you know what Lindsey’s first job [[was]]? Before [[becoming]] a movie star, she [[has mopped]] the floors at the supermarket.",
+   "e": 2,
+   "o": [
+    "mops",
+    "is mopping",
+    "mopped"
+   ],
+   "a": 2,
+   "src": "115會考 第17題",
+   "p": 0.54,
+   "trap": 21.33,
+   "tip": "當明星前的第一份工作，已是過去的事 → 過去式 mopped"
+  },
+  {
+   "t": "[[Have you found]] a summer job yet? Mr. Firth [[has looked for]] someone to take care of his kids during the vacation. Maybe you can [[talk to]] him.",
+   "e": 1,
+   "o": [
+    "is looking for",
+    "looks for",
+    "was looking for"
+   ],
+   "a": 0,
+   "src": "111會考 第15題",
+   "p": 0.58,
+   "trap": 16.87,
+   "tip": "他現在正在找人，你可以去談 → is looking for"
+  },
+  {
+   "t": "Mozart [[has written]] his first music [[when]] he [[was]] only six years old.",
+   "e": 0,
+   "o": [
+    "is writing",
+    "will write",
+    "wrote"
+   ],
+   "a": 2,
+   "src": "109會考 第9題",
+   "p": 0.58,
+   "trap": null,
+   "tip": "when he was six 明確過去時間 → 過去式 wrote，不用完成式"
+  },
+  {
+   "t": "Mr. Olson [[went]] to the doctor when he found he [[has lost]] his hair. He hoped he [[would be able to]] keep his thick hair.",
+   "e": 1,
+   "o": [
+    "is losing",
+    "will lose",
+    "was losing"
+   ],
+   "a": 2,
+   "src": "115會考 第16題",
+   "p": 0.58,
+   "trap": 17.32,
+   "tip": "過去當時頭髮「正在掉」還想保住 → was losing"
+  },
+  {
+   "t": "[[For the past]] twenty years, my father [[worked]] in a school library. But [[he’ll leave]] the job next month.",
+   "e": 1,
+   "o": [
+    "has worked",
+    "is working",
+    "works"
+   ],
+   "a": 0,
+   "src": "109會考 第7題",
+   "p": 0.61,
+   "trap": null,
+   "tip": "過去二十年持續到現在仍在職 → has worked"
+  },
+  {
+   "t": "[[Have you got]] anything for Joe [[soon]]? [[He’d be]] happy to get your gift on his birthday.",
+   "e": 1,
+   "o": [
+    "almost",
+    "either",
+    "yet"
+   ],
+   "a": 2,
+   "src": "105會考 第7題",
+   "p": 0.64,
+   "trap": null,
+   "tip": "現在完成式問句「已經…了嗎」放句尾 → yet"
+  },
+  {
+   "t": "Aunt Gina [[has lived]] in this town [[for]] more than sixty years, so she [[knew]] it very well.",
+   "e": 2,
+   "o": [
+    "will know",
+    "knows",
+    "was going to know"
+   ],
+   "a": 1,
+   "src": "111會考 第11題",
+   "p": 0.64,
+   "trap": 17.7,
+   "tip": "住了六十年，現在仍很熟悉 → 現在式 knows"
+  },
+  {
+   "t": "Paul [[misses]] his parents a lot. He [[didn’t see]] them since he [[came]] to work in Taiwan a year ago.",
+   "e": 1,
+   "o": [
+    "doesn’t see",
+    "hasn’t seen",
+    "won’t see"
+   ],
+   "a": 1,
+   "src": "110會考 第5題",
+   "p": 0.67,
+   "trap": null,
+   "tip": "since + 過去時間點，主要子句用現在完成式 hasn’t seen"
+  },
+  {
+   "t": "I can’t tell you [[what I think]] of the movie because I [[don’t see]] it. I’ll probably [[watch]] it this Saturday.",
+   "e": 1,
+   "o": [
+    "am not seeing",
+    "haven’t seen",
+    "won’t see"
+   ],
+   "a": 1,
+   "src": "113會考 第15題",
+   "p": 0.67,
+   "trap": 15.26,
+   "tip": "到目前為止還沒看過 → haven’t seen"
+  },
+  {
+   "t": "Mom: Linda, [[you’ve been playing]] computer games all evening! [[Have you finished]] your report?\nLinda: Well, [[I was doing]] most of it this afternoon, and I’ll finish it by Friday.",
+   "e": 2,
+   "o": [
+    "I would do",
+    "I did",
+    "I’ll do"
+   ],
+   "a": 1,
+   "src": "113會考 第21題",
+   "p": 0.51,
+   "trap": 19.19,
+   "tip": "今天下午已做完大部分，敘述完成的過去事 → I did"
+  },
+  {
+   "t": "I [[don’t have]] any money with me because I [[had lost]] my wallet [[this morning]].",
+   "e": 1,
+   "o": [
+    "would lose",
+    "lost",
+    "was losing"
+   ],
+   "a": 1,
+   "src": "107會考 第4題",
+   "p": 0.62,
+   "trap": null,
+   "tip": "今早弄丟，單純過去事件 → 過去式 lost"
+  },
+  {
+   "t": "My uncle [[has worked]] [[as]] a bus driver [[since]] ten years, and he still loves his job.",
+   "e": 2,
+   "o": [
+    "for",
+    "in",
+    "ago"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "ten years 是一段時間 → for；since 後接時間點"
+  },
+  {
+   "t": "A: Where’s Kevin? I [[haven’t seen]] him all morning.\nB: He [[has been to]] Kaohsiung to visit his grandma. He’ll [[come back]] tomorrow.",
+   "e": 1,
+   "o": [
+    "has gone to",
+    "goes to",
+    "will go to"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "人已去高雄還沒回來 → has gone to"
+  },
+  {
+   "t": "My parents [[have moved]] to Taichung three years ago, but I [[have stayed]] in Taipei [[since then]].",
+   "e": 0,
+   "o": [
+    "moved",
+    "move",
+    "will move"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "three years ago 明確過去時間 → 過去式 moved"
+  },
+  {
+   "t": "I [[can’t]] go out with you now [[because]] I haven’t finished my homework [[already]].",
+   "e": 2,
+   "o": [
+    "yet",
+    "ever",
+    "ago"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "否定句「還沒」用 yet；already 用於肯定句"
+  },
+  {
+   "t": "A: Have you ever [[been to]] Japan?\nB: Yes, I [[have]]. I [[have been]] there last summer.",
+   "e": 2,
+   "o": [
+    "went",
+    "have gone",
+    "go"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "last summer 過去時間 → 過去式 went，不可用完成式"
+  },
+  {
+   "t": "We [[have known]] each other since we [[have been]] in elementary school, [[so]] we are best friends.",
+   "e": 1,
+   "o": [
+    "were",
+    "are",
+    "will be"
+   ],
+   "a": 0,
+   "src": "仿會考題",
+   "p": null,
+   "trap": null,
+   "tip": "since 子句表過去時間點 → 用過去式 were"
+  }
+ ]
+}

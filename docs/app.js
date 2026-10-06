@@ -23,15 +23,15 @@ const unitOf = id => UNITS.find(u => u.id === id);
 
 /* ---------- games ---------- */
 const GAMES = {
-  vocab:   { lv: 'l1', lvT: 'LV.1 易', ic: '🗡️', name: '野區開局', sub: '單字速殺', en: 'JUNGLE CLEAR', time: 10, desc: '看英文選中文，三選一。字詞例句表的單字全數出場！' },
-  grammar: { lv: 'l2', lvT: 'LV.2 中', ic: '🛡️', name: '中路對線', sub: '文法攻防', en: 'MID LANE DUEL', time: 20, desc: '本課文法選擇題，20 秒內選出正確答案。' },
-  fix:     { lv: 'l3', lvT: 'LV.3 難', ic: '🔥', name: '團戰決勝', sub: '抓漏反殺', en: 'TEAM FIGHT', time: 25, desc: '會考低答對率考題改編：先揪出錯處，再選出正確答案。' },
-  news:    { lv: 'l4', lvT: 'LV.4 極難', ic: '🌐', name: '巔峰賽', sub: '外電解碼', en: 'PEAK BATTLE', time: 30, desc: '國際新聞真實句子！看懂本課文法，選出正確的中文翻譯。' },
-  order:   { lv: 'lx', lvT: 'REVIEW 限定', ic: '🐉', name: '龍王爭奪', sub: '句子重組', en: 'DRAGON PIT', time: 30, desc: '看中文，把打散的單字排回課文句子。' },
-  passage: { lv: 'lx', lvT: 'REVIEW 限定', ic: '🏰', name: '推塔終局', sub: '課文排序', en: 'PUSH THE TOWER', time: 0, desc: '看整篇中文，把打散的課文句子排回正確順序。不限時！' },
-  verb:    { lv: 'l2', lvT: '跨單元', ic: '⚔️', name: '英雄三態', sub: '技能連招', en: 'COMBO SKILLS', time: 10, desc: '不規則動詞三態：看三態選中文／看原形選過去式或過去分詞。' },
-  book:    { lv: 'l3', lvT: '錯題本', ic: '📕', name: '錯題特訓', sub: '斬除錯題', en: 'REVENGE', time: 0, desc: '' },
-  poly:    { lv: 'l2', lvT: '跨單元', ic: '🎭', name: '百變造型', sub: '一字多義', en: 'HERO SKINS', time: 15, desc: '同一個字換了造型就換意思！看例句選出該字的意思。' }
+  vocab:   { lv: 'l1', lvT: 'Level 1・暖身', ic: '🔤', name: '單字速選', en: 'Vocabulary', time: 10, desc: '看英文選中文，三選一。字詞例句表的單字全部都會出現。' },
+  grammar: { lv: 'l2', lvT: 'Level 2・進階', ic: '✏️', name: '文法選擇', en: 'Grammar', time: 20, desc: '本課文法選擇題，20 秒內選出正確答案。' },
+  fix:     { lv: 'l3', lvT: 'Level 3・挑戰', ic: '🔍', name: '文法糾錯', en: 'Error correction', time: 25, desc: '會考低答對率考題改編：先找出錯處，再選出正確答案。' },
+  news:    { lv: 'l4', lvT: 'Level 4・實戰', ic: '📰', name: '新聞句解讀', en: 'Real-world English', time: 30, desc: '國際新聞的真實句子，看懂本課文法，選出正確的中文翻譯。' },
+  order:   { lv: 'lx', lvT: 'Review', ic: '🧩', name: '句子重組', en: 'Sentence order', time: 30, desc: '看中文，把打散的單字排回課文句子。' },
+  passage: { lv: 'lx', lvT: 'Review', ic: '📄', name: '課文排序', en: 'Paragraph order', time: 0, desc: '看整篇中文，把打散的課文句子排回正確順序，不限時。' },
+  verb:    { lv: 'lc', lvT: '共通練習', ic: '🔁', name: '不規則動詞三態', en: 'Irregular verbs', time: 10, desc: '看三態選中文，或看原形選出過去式／過去分詞。' },
+  book:    { lv: 'l3', lvT: '錯題本', ic: '📕', name: '錯題練習', en: 'Review mistakes', time: 0, desc: '' },
+  poly:    { lv: 'lc', lvT: '共通練習', ic: '🔀', name: '一字多義', en: 'Multiple meanings', time: 15, desc: '同一個字在不同句子裡意思不同，看例句選出它的意思。' }
 };
 
 /* ---------- storage / rank ---------- */
@@ -39,30 +39,21 @@ const store = {
   get(k, d) { try { const v = localStorage.getItem('hr_' + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
   set(k, v) { try { localStorage.setItem('hr_' + k, JSON.stringify(v)); } catch (e) {} }
 };
-const RANKS = [
-  { n: '青銅', en: 'BRONZE', e: '🥉', c1: '#e3a46b', c2: '#7a4a24', at: 0 },
-  { n: '白銀', en: 'SILVER', e: '🥈', c1: '#e8eef9', c2: '#7d8aa3', at: 400 },
-  { n: '黃金', en: 'GOLD', e: '🥇', c1: '#ffe39a', c2: '#a87a22', at: 1000 },
-  { n: '白金', en: 'PLATINUM', e: '💠', c1: '#8ff5e2', c2: '#2a8c86', at: 2000 },
-  { n: '鑽石', en: 'DIAMOND', e: '💎', c1: '#9cc4ff', c2: '#3657c9', at: 3500 },
-  { n: '星耀', en: 'STARLIGHT', e: '🌟', c1: '#ffd36b', c2: '#c2410c', at: 5500 },
-  { n: '大師', en: 'MASTER', e: '👑', c1: '#d9b6ff', c2: '#6b2fc9', at: 8000 },
-  { n: '傳說', en: 'LEGEND', e: '🏆', c1: '#ffb3c1', c2: '#c21f4a', at: 12000 }
-];
+const RANKS = [0, 300, 800, 1500, 2500, 4000, 6000, 8500, 12000, 16000].map((at, i) => ({ n: 'Lv.' + (i + 1), at }));
 const coins = () => store.get('coins', 0);
 const rankOf = c => { let r = 0; RANKS.forEach((x, i) => { if (c >= x.at) r = i; }); return r; };
 function rankCard() {
   const c = coins(), r = rankOf(c), R = RANKS[r], N = RANKS[r + 1];
   const pct = N ? Math.round((c - R.at) / (N.at - R.at) * 100) : 100;
-  return `<div class="rank"><div class="badge" style="--c1:${R.c1};--c2:${R.c2}">${R.e}</div>
-    <div style="flex:1;min-width:0"><div class="nm">${R.n} <span class="gold" style="font-size:.6em">${R.en}</span></div>
-    <div class="sub">💰 ${c} 金幣${N ? `・再 ${N.at - c} 金幣晉升 ${N.n}` : '・已達最高段位！'}</div>
-    <div class="xpbar"><i style="width:${pct}%"></i></div>
-    <div class="ladder">${RANKS.map((x, i) => `<span class="${i < r ? 'got' : ''} ${i === r ? 'now got' : ''}">${x.e} ${x.n}</span>`).join('')}</div></div></div>`;
+  const done = UNITS.reduce((s, u) => s + (u.rv ? ['vocab', 'grammar', 'fix', 'news', 'order', 'passage'] : ['vocab', 'grammar', 'fix', 'news']).reduce((t, g) => t + (store.get(bestKey(u.id, g), null) ? 1 : 0), 0), 0);
+  return `<div class="rank"><div class="lvbadge">${R.n}</div>
+    <div style="flex:1;min-width:0"><div class="nm">經驗值 ${c} <span class="muted" style="font-size:14px;font-weight:400">XP</span></div>
+    <div class="sub">${N ? `再 ${N.at - c} XP 升到 ${N.n}` : '已達最高等級'}・已完成 ${done} 項練習・錯題本 ${Book.count()} 題</div>
+    <div class="xpbar"><i style="width:${pct}%"></i></div></div></div>`;
 }
 function topbar() {
   const c = coins(), R = RANKS[rankOf(c)];
-  $('#rk').innerHTML = `${R.e} ${R.n}・<span class="coin">💰 ${c}</span>`;
+  $('#rk').innerHTML = `${R.n}・<span class="coin">${c} XP</span>`;
 }
 const bestKey = (u, g) => `best_${u}_${g}`;
 function stars(acc) { return acc >= 90 ? 3 : acc >= 70 ? 2 : acc >= 40 ? 1 : 0; }
@@ -91,7 +82,7 @@ function speak(t) {
 }
 document.addEventListener('click', e => { const b = e.target.closest('[data-say]'); if (b) speak(b.dataset.say); });
 
-const KILLS = ['', '', 'DOUBLE KILL<small>雙殺</small>', 'TRIPLE KILL<small>三殺</small>', 'QUADRA KILL<small>四殺</small>', 'PENTA KILL<small>五殺</small>'];
+
 function banner(html) {
   const k = $('#kill'); k.innerHTML = html; k.classList.remove('go'); void k.offsetWidth; k.classList.add('go');
 }
@@ -157,20 +148,19 @@ function home() {
   stopTimer();
   app.innerHTML = `
   <section class="hero">
-    <div class="kicker">305 班專屬・九上英語・段考前特訓</div>
-    <h1>英雄峽谷</h1>
-    <div class="sub2"><span class="cls">305</span><span>段考爭霸戰</span></div>
-    <p>九大單元、每單元四階任務，由易到難一路推塔。答對累積金幣衝段位！</p>
+    <div class="kicker">九上英語・康軒 Book 5・段考複習</div>
+    <h1><span class="cls">305</span> 英語段考複習</h1>
+    <p>九個單元，每單元四個等級由易到難。可以自己練，也可以和同學 1 vs 1。</p>
   </section>
   <div class="card frame">${rankCard()}</div>
-  <div class="sec"><h2>選擇戰場</h2><small>每課一單元・每兩課一個 Review</small></div>
+  <div class="sec"><h2>單元</h2><small>每課一個單元・每兩課一個 Review</small></div>
   <div class="units">${UNITS.map(u => {
     const gs = u.rv ? ['vocab', 'grammar', 'fix', 'news', 'order', 'passage'] : ['vocab', 'grammar', 'fix', 'news'];
     const st = gs.reduce((s, g) => s + (store.get(bestKey(u.id, g), null)?.stars || 0), 0), mx = gs.length * 3;
     return `<a class="unit ${u.rv ? 'rv' : ''}" href="#/u/${u.id}">
       <span class="stars">${st} / ${mx} ★</span>
-      <div class="no">${u.rv ? 'REVIEW ' + u.no.slice(1) : 'LESSON ' + u.no.slice(1)}</div>
-      <h3>${esc(u.title)}</h3><p>${esc(u.zh)}｜${esc(u.gram)}</p></a>`;
+      <div class="no">${u.rv ? 'Review ' + u.no.slice(1) : 'Lesson ' + u.no.slice(1)}</div>
+      <h3>${esc(u.rv ? u.zh : u.title)}</h3><p>${u.rv ? '' : esc(u.zh) + '｜'}${esc(u.gram)}</p></a>`;
   }).join('')}</div>
   ${crossSection()}`;
 }
@@ -187,28 +177,28 @@ function missionCard(uid, g) {
     if (g === 'passage') count = REVIEW[u.rv].sents.length + ' 句・' + REVIEW[u.rv].page;
   } else count = g === 'verb' ? VERBS.length + ' 個動詞' : POLY.length + ' 題庫';
   return `<a class="mission ${G.lv}" href="#/play/${uid}/${g}">
-    <div class="lv">${G.lvT}</div><div class="ic">${G.ic}</div>
-    <h3>${G.name}・${G.sub}</h3><div class="en">${G.en}</div>
+    <div class="lv"><span class="ic">${G.ic}</span>${G.lvT}</div>
+    <h3>${G.name}</h3><div class="en">${G.en}</div>
     <p>${G.desc}</p>
     <div class="meta"><span class="chip">${G.time ? '⏱ ' + G.time + ' 秒/題' : '♾ 不限時'}</span><span class="chip">${count}</span>
       ${b ? `<span class="best">${starStr(b.stars)}</span>` : ''}</div></a>`;
 }
 function crossSection() {
-  return `<div class="sec"><h2>全單元共通任務</h2><small>每個單元都適用</small></div>
+  return `<div class="sec"><h2>共通練習</h2><small>每個單元都適用</small></div>
   <div class="missions" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">${missionCard('ALL', 'verb')}${missionCard('ALL', 'poly')}</div>`;
 }
 function unitView(id) {
   stopTimer();
   const u = unitOf(id); if (!u) return home();
-  const extra = u.rv ? `<div class="sec"><h2>Review 限定任務</h2><small>課本 ${REVIEW[u.rv].page}・${REVIEW[u.rv].lesson}</small></div>
+  const extra = u.rv ? `<div class="sec"><h2>Review 練習</h2><small>課本 ${REVIEW[u.rv].page}・${REVIEW[u.rv].lesson}</small></div>
     <div class="missions" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">${missionCard(id, 'order')}${missionCard(id, 'passage')}</div>` : '';
-  app.innerHTML = `<div class="crumb"><a href="#/">◀ 回大廳</a></div>
+  app.innerHTML = `<div class="crumb"><a href="#/">← 回首頁</a></div>
   <div class="card frame">
-    <div class="chip ${u.rv ? 'cyan' : 'gold'}">${u.rv ? 'REVIEW ' + u.no.slice(1) + '・涵蓋 L' + u.ls.join('、L') : 'LESSON ' + u.no.slice(1)}</div>
+    <div class="chip ${u.rv ? 'cyan' : 'acc'}">${u.rv ? 'Review ' + u.no.slice(1) + '・涵蓋 L' + u.ls.join('、L') : 'Lesson ' + u.no.slice(1)}</div>
     <h2 style="margin:8px 0 4px;font-size:22px">${esc(u.title)}</h2>
     <div class="grammarbox">${esc(u.zh)}<br><b>文法重點：</b>${esc(u.gram)}</div>
   </div>
-  <div class="sec"><h2>四階任務</h2><small>由易到難</small></div>
+  <div class="sec"><h2>四個等級</h2><small>由易到難</small></div>
   <div class="missions four">${missionCard(id, 'vocab')}${missionCard(id, 'grammar')}${missionCard(id, 'fix')}${missionCard(id, 'news')}</div>
   ${extra}${crossSection()}`;
 }
@@ -221,7 +211,7 @@ function passage(u) {
   const placed = []; let checks = 0, finished = false, mark = null;
   const zhAll = R.sents.map(s => s.zh).join('');
   const draw = () => {
-    app.innerHTML = `<div class="hud"><a class="btn sm" href="#/u/${u.id}">◀</a><span class="pill">🏰 推塔終局</span>
+    app.innerHTML = `<div class="hud"><a class="btn sm" href="#/u/${u.id}">←</a><span class="pill">📄 課文排序</span>
       <span class="pill">已排 ${placed.length} / ${N}</span><span class="pill">檢查 ${checks} 次</span></div>
       <div class="qcard"><div class="qhead"><span>${esc(R.lesson)}・${esc(R.page)}・${esc(R.title)}</span><span>♾ 不限時</span></div>
       <p class="muted" style="margin:8px 0 4px;font-size:13px">📜 全文中文（照著中文的順序，把英文句子排好）</p>
@@ -252,11 +242,11 @@ function passage(u) {
   function win() {
     beep(true);
     const gain = Math.max(100, 600 - (checks - 1) * 100), acc = Math.max(0, Math.round(100 - (checks - 1) * 25));
-    banner('VICTORY<small>推塔成功</small>');
+    banner('全部排對了');
     store.set('coins', coins() + gain); topbar();
     const k = bestKey(u.id, 'passage'), b = store.get(k, null), st = stars(acc);
     if (!b || st > b.stars || (st === b.stars && gain > b.score)) store.set(k, { stars: st, score: gain, acc });
-    $('#fb').innerHTML = `<div class="feedback ok">✔ 全部排對！檢查 ${checks} 次，獲得 <b class="gold">+${gain} 金幣</b>　${starStr(st)}</div>
+    $('#fb').innerHTML = `<div class="feedback ok">✔ 全部排對！檢查 ${checks} 次，獲得 <b class="acc">+${gain} XP</b>　${starStr(st)}</div>
       <div class="btnrow"><button class="btn" data-say="${esc(R.sents.map(s => s.en).join(' '))}">🔊 聽全文</button><button class="btn gold" onclick="location.hash='#/solo/${u.id}/passage?'+Date.now()">再玩一次</button><a class="btn" href="#/u/${u.id}">回單元</a></div>`;
   }
   draw();

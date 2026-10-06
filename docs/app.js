@@ -30,6 +30,7 @@ const GAMES = {
   order:   { lv: 'lx', lvT: 'REVIEW 限定', ic: '🐉', name: '龍王爭奪', sub: '句子重組', en: 'DRAGON PIT', time: 30, desc: '看中文，把打散的單字排回課文句子。' },
   passage: { lv: 'lx', lvT: 'REVIEW 限定', ic: '🏰', name: '推塔終局', sub: '課文排序', en: 'PUSH THE TOWER', time: 0, desc: '看整篇中文，把打散的課文句子排回正確順序。不限時！' },
   verb:    { lv: 'l2', lvT: '跨單元', ic: '⚔️', name: '英雄三態', sub: '技能連招', en: 'COMBO SKILLS', time: 10, desc: '不規則動詞三態：看三態選中文／看原形選過去式或過去分詞。' },
+  book:    { lv: 'l3', lvT: '錯題本', ic: '📕', name: '錯題特訓', sub: '斬除錯題', en: 'REVENGE', time: 0, desc: '' },
   poly:    { lv: 'l2', lvT: '跨單元', ic: '🎭', name: '百變造型', sub: '一字多義', en: 'HERO SKINS', time: 15, desc: '同一個字換了造型就換意思！看例句選出該字的意思。' }
 };
 
@@ -120,20 +121,20 @@ function buildQuestions(u, g) {
     return shuffle(ws).map(w => {
       const pool = shuffle(ws.filter(x => x.zh !== w.zh && x.en !== w.en)).slice(0, 2).map(x => x.zh);
       const o = shuffle([w.zh, ...pool]);
-      return { kind: 'vocab', w, o, a: o.indexOf(w.zh) };
+      return { kind: 'vocab', l: w.l, w, o, a: o.indexOf(w.zh) };
     });
   }
-  if (g === 'grammar') return shuffle(u.ls.flatMap(n => BANK[n].grammar)).map(q => ({ kind: 'grammar', ...q }));
+  if (g === 'grammar') return shuffle(u.ls.flatMap(n => BANK[n].grammar.map(q => ({ kind: 'grammar', l: n, ...q }))));
   if (g === 'fix') {
-    const all = u.ls.flatMap(n => BANK[n].fix.map(f => ({ kind: 'fix', ...f })));
+    const all = u.ls.flatMap(n => BANK[n].fix.map(f => ({ kind: 'fix', l: n, ...f })));
     // 會考題依答對率由低到高先上場，其餘隨機
     const real = all.filter(f => f.p).sort((a, b) => a.p - b.p), other = shuffle(all.filter(f => !f.p));
     const out = []; let i = 0, j = 0;
     while (i < real.length || j < other.length) { if (i < real.length) out.push(real[i++]); if (j < other.length) out.push(other[j++]); }
     return out;
   }
-  if (g === 'news') return shuffle(u.ls.flatMap(n => (NEWS[n] || []))).map(q => ({ kind: 'news', ...q }));
-  if (g === 'order') return shuffle(REVIEW[u.rv].sents).map(s => ({ kind: 'order', ...s }));
+  if (g === 'news') return shuffle(u.ls.flatMap(n => (NEWS[n] || []).map(q => ({ kind: 'news', l: n, ...q }))));
+  if (g === 'order') return shuffle(REVIEW[u.rv].sents).map(s => ({ kind: 'order', r: u.rv, ...s }));
   if (g === 'verb') {
     const qs = [];
     VERBS.forEach(v => {
@@ -212,210 +213,6 @@ function unitView(id) {
   ${extra}${crossSection()}`;
 }
 
-/* ---------- game engine ---------- */
-let G = null;
-function play(uid, g) {
-  stopTimer();
-  const u = unitOf(uid) || { id: 'ALL', ls: [] };
-  if (g === 'passage') return passage(u);
-  const qs = buildQuestions(u, g);
-  G = { uid, g, u, qs, i: 0, score: 0, right: 0, done: 0, streak: 0, best: 0, wrong: [], first: true };
-  next();
-}
-function hud() {
-  const G2 = GAMES[G.g];
-  return `<div class="hud"><a class="btn sm" href="${G.uid === 'ALL' ? '#/' : '#/u/' + G.uid}">◀</a>
-    <span class="pill">${G2.ic} ${G2.name}</span><span class="pill coin">💰 ${G.score}</span>
-    <span class="pill">${G.streak >= 2 ? '🔥 連殺 ' + G.streak : '✔ ' + G.right + ' / ' + G.done}</span>
-    <span class="sp"></span><button class="btn sm" id="quit">結束結算</button></div>`;
-}
-function qhead() {
-  const t = GAMES[G.g].time;
-  return `<div class="qhead"><span>第 ${G.i + 1} / ${G.qs.length} 題</span><span>⏱ <span class="tleft">${t}</span> 秒</span></div><div class="timer"><i></i></div>`;
-}
-function bindQuit() { const q = $('#quit'); if (q) q.onclick = () => { stopTimer(); result(); }; }
-function next() {
-  if (G.i >= G.qs.length) return result();
-  const q = G.qs[G.i];
-  ({ vocab: showMCQ, grammar: showMCQ, verb3: showMCQ, verbF: showMCQ, poly: showMCQ, news: showMCQ, fix: showFix, order: showOrder })[q.kind](q);
-}
-function award(ok, left, total, base = 100) {
-  G.done++;
-  if (ok) {
-    G.right++; G.streak++; G.best = Math.max(G.best, G.streak);
-    const p = Math.round(base * (0.6 + 0.4 * (total ? left / total : 1))) + (G.streak >= 3 ? 20 : 0);
-    G.score += p;
-    if (G.first) { banner('FIRST BLOOD<small>首殺</small>'); G.first = false; }
-    else if (G.streak >= 2) banner(KILLS[Math.min(G.streak, 5)] || KILLS[5]);
-    beep(true); return p;
-  }
-  G.streak = 0; beep(false); return 0;
-}
-
-/* --- MCQ (vocab / grammar / verb / poly) --- */
-function showMCQ(q) {
-  const T = GAMES[G.g].time;
-  let body = '', optCls = 'en';
-  if (q.kind === 'vocab') {
-    body = `<div class="word">${esc(q.w.en)}</div><div class="pos">${esc(q.w.pos || 'phr.')}</div>
-      <div class="center" style="margin-top:6px"><button class="say" data-say="${esc(q.w.en)}">🔊 再聽一次</button></div>`;
-    optCls = '';
-  } else if (q.kind === 'grammar') {
-    body = `<div class="stem">${esc(q.q).replace(/_{3,}/g, '<span class="blank"></span>')}</div>`;
-  } else if (q.kind === 'verb3') {
-    body = `<p class="muted center" style="margin:10px 0 0">這組三態是哪個字？選出中文意思</p>
-      <div class="word" style="font-size:clamp(26px,7vw,40px)">${esc(q.v[0])} <span class="muted">–</span> ${esc(q.v[1])} <span class="muted">–</span> ${esc(q.v[2])}</div>
-      <div class="center" style="margin-top:6px"><button class="say" data-say="${esc(q.v.slice(0, 3).join(', '))}">🔊 唸三態</button></div>`;
-    optCls = '';
-  } else if (q.kind === 'verbF') {
-    body = `<div class="word">${esc(q.v[0])}</div><div class="pos">${esc(q.v[3])}</div>
-      <p class="center" style="font-size:18px;margin:10px 0 0">請選出 <b class="gold">${q.ask === 1 ? '過去式' : '過去分詞'}</b></p>`;
-  } else if (q.kind === 'news') {
-    body = `<div class="newsrc">📰 <b>${esc(q.outlet)}</b>${q.date ? '・' + esc(q.date) : ''}　<a href="${esc(q.url)}" target="_blank" rel="noopener">${esc(q.title || '原文連結')} ↗</a></div>
-      <div class="stem news">${esc(q.en)}</div>
-      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><button class="say" data-say="${esc(q.en)}">🔊 聽新聞句</button><span class="chip">文法：${esc(q.gz)}</span></div>
-      <p class="muted" style="margin:10px 0 0;font-size:14px">哪一個是正確的中文翻譯？</p>`;
-    optCls = '';
-  } else if (q.kind === 'poly') {
-    const irr = { light: 'lit', lead: 'led', swing: 'swung', shake: 'shook', grow: 'grew', keep: 'kept', leave: 'left', mean: 'meant', stand: 'stood', fall: 'fell', fly: 'flew', ring: 'rang' };
-    const re = new RegExp('\\b(' + q.w + '\\w*|' + q.w.slice(0, -1) + '\\w*' + (irr[q.w] ? '|' + irr[q.w] : '') + ')\\b', 'i');
-    const s = esc(q.s).replace(re, '<b class="gold" style="border-bottom:2px solid var(--gold)">$1</b>');
-    body = `<p class="muted" style="margin:10px 0 0">句中 <b class="gold">${esc(q.w)}</b> 是什麼意思？</p><div class="stem">${s}</div>
-      <button class="say" data-say="${esc(q.s)}">🔊 聽例句</button>`;
-    optCls = '';
-  }
-  app.innerHTML = `${hud()}<div class="qcard">${qhead()}${body}
-    <div class="opts ${q.kind === 'verbF' ? 'two' : ''}">${q.o.map((o, k) => `<button data-k="${k}"><b>${L[k]}</b><span class="${optCls}">${esc(o)}</span></button>`).join('')}</div>
-    <div id="fb"></div></div>`;
-  bindQuit();
-  if (q.kind === 'vocab') speak(q.w.en);
-  let answered = false;
-  const left = startTimer(T, () => answer(-1));
-  app.querySelectorAll('.opts button').forEach(b => b.onclick = () => answer(+b.dataset.k));
-  function answer(k) {
-    if (answered) return; answered = true; stopTimer();
-    const ok = k === q.a, l = left ? left() : 0;
-    const p = award(ok, l, T);
-    app.querySelectorAll('.opts button').forEach((b, i) => { b.disabled = true; if (i === q.a) b.classList.add('right'); else if (i === k) b.classList.add('wrong'); });
-    let info = '';
-    if (q.kind === 'vocab') info = `<b>${esc(q.w.en)}</b> ${esc(q.w.pos)} ${esc(q.w.zh)}<span class="src">📖 ${esc(q.w.ex)} <button class="say" data-say="${esc(q.w.ex)}">🔊</button></span>`;
-    if (q.kind === 'grammar') info = esc(q.tip || '');
-    if (q.kind === 'verb3' || q.kind === 'verbF') info = `<b>${esc(q.v[0])} – ${esc(q.v[1])} – ${esc(q.v[2])}</b>　${esc(q.v[3])}`;
-    if (q.kind === 'poly') info = `<b>${esc(q.w)}</b> 在這句是「${esc(q.o[q.a])}」`;
-    if (q.kind === 'news') {
-      info = esc(q.tip || '');
-      const st = $('.stem.news'); if (st) st.innerHTML = esc(q.hl).replace(/\[\[(.*?)\]\]/g, '<mark>$1</mark>');
-    }
-    $('#fb').innerHTML = `<div class="feedback ${ok ? 'ok' : 'bad'}">${ok ? `✔ 擊殺！+${p} 金幣` : (k < 0 ? '⏰ 時間到！' : '✘ 被反殺了！')}　${info}</div>
-      <div class="nextrow"><button class="btn gold" id="nx">${G.i + 1 >= G.qs.length ? '看戰績 ▶' : '下一題 ▶'}</button></div>`;
-    if (!ok) G.wrong.push(q);
-    const go = () => { clearTimeout(auto); G.i++; next(); };
-    const auto = ok ? setTimeout(go, q.kind === 'grammar' ? 1600 : q.kind === 'news' ? 2600 : 1000) : null;
-    $('#nx').onclick = go;
-  }
-}
-
-/* --- fix (two-stage error correction) --- */
-function fixParts(t) {
-  const parts = []; let segs = 0;
-  t.split(/(\[\[.*?\]\])/).forEach(p => { if (p.startsWith('[[')) parts.push({ seg: segs++, t: p.slice(2, -2) }); else if (p) parts.push({ t: p }); });
-  return parts;
-}
-function fixSentence(q, mode) {
-  const marks = ['①', '②', '③'];
-  return fixParts(q.t).map(p => {
-    if (p.seg == null) return esc(p.t).replace(/\n/g, '<br>');
-    if (mode === 'fixed' && p.seg === q.e) return `<span class="seg fixd">${esc(q.o[q.a])}</span>`;
-    return `<button class="seg" data-s="${p.seg}"><sup>${marks[p.seg]}</sup>${esc(p.t)}</button>`;
-  }).join('');
-}
-function showFix(q) {
-  const T = GAMES.fix.time;
-  const srcLine = q.p ? `${esc(q.src)}・全國答對率 <b>${Math.round(q.p * 100)}%</b>${q.trap ? `・本句錯誤選項當年有 <b>${q.trap}%</b> 考生誤選` : ''}` : esc(q.src);
-  app.innerHTML = `${hud()}<div class="qcard">${qhead()}
-    <div class="stage"><span class="on" id="st1">① 揪出錯處</span><span id="st2">② 選出正解</span>
-      ${q.p ? `<span class="chip red" style="margin-left:auto">會考答對率 ${Math.round(q.p * 100)}%</span>` : ''}</div>
-    <p class="muted" style="margin:8px 0 0" id="ins">下面句子中，三個畫線處有一處錯誤。點出錯的地方！</p>
-    <div class="fixs">${fixSentence(q)}</div>
-    <div id="s2"></div><div id="fb"></div></div>`;
-  bindQuit();
-  let stage = 1, okS1 = false, finished = false;
-  const left = startTimer(T, () => finish(-1));
-  app.querySelectorAll('.seg').forEach(b => b.onclick = () => {
-    if (stage !== 1) return;
-    const s = +b.dataset.s; okS1 = s === q.e;
-    app.querySelectorAll('.seg').forEach(x => { x.disabled = true; if (+x.dataset.s === q.e) x.classList.add(okS1 ? 'picked' : 'err'); });
-    if (!okS1) { b.classList.add('shake'); b.style.borderColor = 'var(--muted)'; beep(false); }
-    else beep(true);
-    stage = 2; $('#st1').className = 'done'; $('#st2').className = 'on';
-    $('#ins').innerHTML = okS1 ? '✔ 抓到了！錯處在紅色標記處。現在選出正確的寫法：' : `✘ 錯處其實在 <b class="bad">${['①', '②', '③'][q.e]}</b>。仍可搶救：選出正確的寫法！`;
-    $('#s2').innerHTML = `<div class="opts">${q.o.map((o, k) => `<button data-k="${k}"><b>${L[k]}</b><span class="en">${esc(o)}</span></button>`).join('')}</div>`;
-    app.querySelectorAll('#s2 .opts button').forEach(x => x.onclick = () => finish(+x.dataset.k));
-  });
-  function finish(k) {
-    if (finished) return; finished = true; stopTimer();
-    const okS2 = k === q.a, l = left ? left() : 0;
-    // 兩關都對才算擊殺；第二關對、第一關錯得一半金幣
-    let p = 0;
-    if (okS1 && okS2) p = award(true, l, T, 150);
-    else { award(false); if (okS2) { p = 40; G.score += p; } }
-    app.querySelectorAll('.seg').forEach(x => x.disabled = true);
-    app.querySelectorAll('#s2 .opts button').forEach((b, i) => { b.disabled = true; if (i === q.a) b.classList.add('right'); else if (i === k) b.classList.add('wrong'); });
-    const msg = okS1 && okS2 ? `✔ 團戰大勝！+${p} 金幣` : k < 0 ? '⏰ 時間到！' : okS2 ? `△ 第二關答對，搶回 +${p} 金幣` : '✘ 團滅了！';
-    $('#fb').innerHTML = `<div class="feedback ${okS1 && okS2 ? 'ok' : 'bad'}">${msg}
-      <div class="fixs" style="font-size:17px;margin:8px 0 2px">✅ ${fixSentence(q, 'fixed').replace(/<button class="seg" data-s="\d"><sup>.<\/sup>/g, '<span>').replace(/<\/button>/g, '</span>')}</div>
-      ${esc(q.tip || '')}<span class="src">${srcLine}</span></div>
-      <div class="nextrow"><button class="btn gold" id="nx">${G.i + 1 >= G.qs.length ? '看戰績 ▶' : '下一題 ▶'}</button></div>`;
-    if (!(okS1 && okS2)) G.wrong.push(q);
-    $('#nx').onclick = () => { G.i++; next(); };
-  }
-}
-
-/* --- order (sentence unscramble, 20 s) --- */
-function chipsOf(s) {
-  let en = s.en, end = '';
-  if (s.end != null) end = s.end; else { const m = en.match(/[.?!]$/); if (m) { end = m[0]; en = en.slice(0, -1); } }
-  const chips = s.chips ? s.chips.split('|') : en.split(' ');
-  return { chips, end, answer: chips.join(' ') };
-}
-function showOrder(q) {
-  const T = GAMES.order.time, C = chipsOf(q);
-  let tiles = shuffle(C.chips.map((t, i) => ({ t, i })));
-  if (tiles.every((x, k) => x.i === k) && tiles.length > 1) tiles.reverse();
-  const placed = [];
-  app.innerHTML = `${hud()}<div class="qcard">${qhead()}
-    <div class="zh">🀄 ${esc(q.zh)}</div>
-    <p class="muted" style="margin:6px 0 0;font-size:13px">依序點選下方字卡排成句子；點上方已放的字卡可退回。</p>
-    <div class="slot" id="slot"><span class="empty">（點字卡放這裡）</span></div>
-    <div class="pool" id="pool">${tiles.map((x, k) => `<button class="tile" data-k="${k}">${esc(x.t)}</button>`).join('')}</div>
-    <div id="fb"></div></div>`;
-  bindQuit();
-  let done = false;
-  const left = startTimer(T, () => check(true));
-  const draw = () => {
-    $('#slot').innerHTML = placed.length ? placed.map((k, j) => `<button class="tile" data-j="${j}">${esc(tiles[k].t)}</button>`).join('') + `<span class="endp">${esc(C.end)}</span>` : '<span class="empty">（點字卡放這裡）</span>';
-    app.querySelectorAll('#pool .tile').forEach(b => b.classList.toggle('used', placed.includes(+b.dataset.k)));
-    app.querySelectorAll('#slot .tile').forEach(b => b.onclick = () => { if (done) return; placed.splice(+b.dataset.j, 1); draw(); });
-  };
-  app.querySelectorAll('#pool .tile').forEach(b => b.onclick = () => {
-    if (done || placed.includes(+b.dataset.k)) return;
-    placed.push(+b.dataset.k); draw();
-    if (placed.length === tiles.length) setTimeout(() => check(false), 150);
-  });
-  function check(timeout) {
-    if (done) return; done = true; stopTimer();
-    const mine = placed.map(k => tiles[k].t).join(' ');
-    const ok = !timeout && mine === C.answer;
-    const p = award(ok, left ? left() : 0, T);
-    $('#slot').classList.add(ok ? 'done-ok' : 'done-bad');
-    $('#fb').innerHTML = `<div class="feedback ${ok ? 'ok' : 'bad'}">${ok ? `✔ 拿下巨龍！+${p} 金幣` : timeout ? '⏰ 時間到！' : '✘ 順序不對！'}
-      <div class="answer">${esc(q.en)} <button class="say" data-say="${esc(q.en)}">🔊</button></div></div>
-      <div class="nextrow"><button class="btn gold" id="nx">${G.i + 1 >= G.qs.length ? '看戰績 ▶' : '下一題 ▶'}</button></div>`;
-    if (!ok) G.wrong.push(q);
-    $('#nx').onclick = () => { G.i++; next(); };
-  }
-}
-
 /* --- passage reorder (no time limit) --- */
 function passage(u) {
   const R = REVIEW[u.rv], N = R.sents.length;
@@ -460,53 +257,25 @@ function passage(u) {
     const k = bestKey(u.id, 'passage'), b = store.get(k, null), st = stars(acc);
     if (!b || st > b.stars || (st === b.stars && gain > b.score)) store.set(k, { stars: st, score: gain, acc });
     $('#fb').innerHTML = `<div class="feedback ok">✔ 全部排對！檢查 ${checks} 次，獲得 <b class="gold">+${gain} 金幣</b>　${starStr(st)}</div>
-      <div class="btnrow"><button class="btn" data-say="${esc(R.sents.map(s => s.en).join(' '))}">🔊 聽全文</button><button class="btn gold" onclick="location.hash='#/play/${u.id}/passage?'+Date.now()">再玩一次</button><a class="btn" href="#/u/${u.id}">回單元</a></div>`;
+      <div class="btnrow"><button class="btn" data-say="${esc(R.sents.map(s => s.en).join(' '))}">🔊 聽全文</button><button class="btn gold" onclick="location.hash='#/solo/${u.id}/passage?'+Date.now()">再玩一次</button><a class="btn" href="#/u/${u.id}">回單元</a></div>`;
   }
   draw();
 }
 
-/* --- result --- */
-function result() {
-  stopTimer();
-  const acc = G.done ? Math.round(G.right / G.done * 100) : 0, st = stars(acc), win = acc >= 60 && G.done > 0;
-  store.set('coins', coins() + G.score); topbar();
-  const k = bestKey(G.uid, G.g), b = store.get(k, null);
-  const full = G.done >= Math.min(G.qs.length, 10);
-  let newBest = false;
-  if (full && (!b || st > b.stars || (st === b.stars && G.score > b.score))) { store.set(k, { stars: st, score: G.score, acc }); newBest = true; }
-  const rv = G.wrong.map(q => {
-    if (q.kind === 'vocab') return `<li><b>${esc(q.w.en)}</b> ${esc(q.w.pos)} ${esc(q.w.zh)} <button class="say" data-say="${esc(q.w.en)}">🔊</button><div class="zz">${esc(q.w.ex)}</div></li>`;
-    if (q.kind === 'grammar') return `<li>${esc(q.q).replace(/_{3,}/g, `<b class="ok">${esc(q.o[q.a])}</b>`).replace(/\n/g, ' ')}<div class="zz">${esc(q.tip || '')}</div></li>`;
-    if (q.kind === 'fix') return `<li>${fixParts(q.t).map(p => p.seg == null ? esc(p.t) : p.seg === q.e ? `<s class="bad">${esc(p.t)}</s> <b class="ok">${esc(q.o[q.a])}</b>` : esc(p.t)).join('').replace(/\n/g, ' ')}<div class="zz">${esc(q.tip || '')}</div></li>`;
-    if (q.kind === 'order') return `<li>${esc(q.en)}<div class="zz">${esc(q.zh)}</div></li>`;
-    if (q.kind === 'verb3' || q.kind === 'verbF') return `<li><b>${esc(q.v[0])} – ${esc(q.v[1])} – ${esc(q.v[2])}</b>　${esc(q.v[3])}</li>`;
-    if (q.kind === 'news') return `<li>${esc(q.en)}<div class="zz">${esc(q.o[q.a])}（${esc(q.outlet)}）</div></li>`;
-    if (q.kind === 'poly') return `<li>${esc(q.s)}<div class="zz">${esc(q.w)}：${esc(q.o[q.a])}</div></li>`;
-    return '';
-  }).join('');
-  app.innerHTML = `<div class="card frame result">
-    <div class="vt ${win ? 'win' : 'lose'}">${win ? 'VICTORY' : 'DEFEAT'}</div>
-    <div>${win ? '<span class="mvp">MVP</span>' : '<span class="chip red">再接再厲，重新上分！</span>'}　<span class="gold" style="font-size:22px">${starStr(st)}</span></div>
-    <div class="stats"><div><b>${G.right}/${G.done}</b><small>擊殺 / 出戰</small></div><div><b>${acc}%</b><small>命中率</small></div>
-      <div><b>${G.best}</b><small>最長連殺</small></div><div><b>+${G.score}</b><small>金幣</small></div></div>
-    ${newBest ? '<p class="gold" style="margin:0">🏅 刷新本任務最佳紀錄！</p>' : (!full ? '<p class="muted" style="margin:0;font-size:13px">（至少完成 10 題才會記錄星等）</p>' : '')}
-    ${rv ? `<h3 style="text-align:left;margin:16px 0 0">📝 陣亡回顧（${G.wrong.length}）</h3><ol class="review">${rv}</ol>` : (G.done ? '<p class="ok">零失誤！完美推塔 🎯</p>' : '')}
-    <div class="btnrow"><button class="btn gold" id="again">再戰一場</button>${G.wrong.length && G.g !== 'order' ? '<button class="btn" id="redo">只練錯題</button>' : ''}
-      <a class="btn" href="${G.uid === 'ALL' ? '#/' : '#/u/' + G.uid}">回${G.uid === 'ALL' ? '大廳' : '單元'}</a></div></div>`;
-  $('#again').onclick = () => play(G.uid, G.g);
-  const rd = $('#redo');
-  if (rd) rd.onclick = () => { const w = shuffle(G.wrong); G = { ...G, qs: w, i: 0, score: 0, right: 0, done: 0, streak: 0, best: 0, wrong: [], first: true }; next(); };
-}
 
 /* ---------- router ---------- */
 function route() {
   stopTimer();
   const h = location.hash.replace(/\?.*$/, '');
   let m;
-  if ((m = h.match(/^#\/u\/(\w+)/))) unitView(m[1]);
-  else if ((m = h.match(/^#\/play\/(\w+)\/(\w+)/))) play(m[1], m[2]);
-  else home();
-  topbar(); window.scrollTo(0, 0);
+  if (G && G.mode === 'host' && !/^#\/play/.test(h)) closeNet();
+  if ((m = h.match(/^#\/u\/(\w+)/))) { closeNet(); unitView(m[1]); }
+  else if ((m = h.match(/^#\/play\/(\w+)\/(\w+)/))) prep(m[1], m[2]);
+  else if ((m = h.match(/^#\/solo\/(\w+)\/(\w+)/))) solo(m[1], m[2]);
+  else if ((m = h.match(/^#\/join\/(\d{4})/))) joinScreen(m[1]);
+  else if ((m = h.match(/^#\/book(?:\/(\w+))?/))) bookView(m[1]);
+  else { closeNet(); home(); }
+  topbar(); updateBookBadge(); window.scrollTo(0, 0);
 }
 window.addEventListener('hashchange', route);
 if (window.speechSynthesis) speechSynthesis.onvoiceschanged = () => {};

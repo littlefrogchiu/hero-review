@@ -24,9 +24,10 @@ const unitOf = id => UNITS.find(u => u.id === id);
 /* ---------- games ---------- */
 const GAMES = {
   vocab:   { lv: 'l1', lvT: 'LV.1 易', ic: '🗡️', name: '野區開局', sub: '單字速殺', en: 'JUNGLE CLEAR', time: 10, desc: '看英文選中文，三選一。字詞例句表的單字全數出場！' },
-  grammar: { lv: 'l2', lvT: 'LV.2 中', ic: '🛡️', name: '中路對線', sub: '文法攻防', en: 'MID LANE DUEL', time: 20, desc: '本課文法選擇題，題目取自主題式測驗卷與課次段考卷。' },
+  grammar: { lv: 'l2', lvT: 'LV.2 中', ic: '🛡️', name: '中路對線', sub: '文法攻防', en: 'MID LANE DUEL', time: 20, desc: '本課文法選擇題，20 秒內選出正確答案。' },
   fix:     { lv: 'l3', lvT: 'LV.3 難', ic: '🔥', name: '團戰決勝', sub: '抓漏反殺', en: 'TEAM FIGHT', time: 25, desc: '會考低答對率考題改編：先揪出錯處，再選出正確答案。' },
-  order:   { lv: 'lx', lvT: 'REVIEW 限定', ic: '🐉', name: '龍王爭奪', sub: '句子重組', en: 'DRAGON PIT', time: 20, desc: '看中文，把打散的單字排回課文句子。' },
+  news:    { lv: 'l4', lvT: 'LV.4 極難', ic: '🌐', name: '巔峰賽', sub: '外電解碼', en: 'PEAK BATTLE', time: 30, desc: '國際新聞真實句子！看懂本課文法，選出正確的中文翻譯。' },
+  order:   { lv: 'lx', lvT: 'REVIEW 限定', ic: '🐉', name: '龍王爭奪', sub: '句子重組', en: 'DRAGON PIT', time: 30, desc: '看中文，把打散的單字排回課文句子。' },
   passage: { lv: 'lx', lvT: 'REVIEW 限定', ic: '🏰', name: '推塔終局', sub: '課文排序', en: 'PUSH THE TOWER', time: 0, desc: '看整篇中文，把打散的課文句子排回正確順序。不限時！' },
   verb:    { lv: 'l2', lvT: '跨單元', ic: '⚔️', name: '英雄三態', sub: '技能連招', en: 'COMBO SKILLS', time: 10, desc: '不規則動詞三態：看三態選中文／看原形選過去式或過去分詞。' },
   poly:    { lv: 'l2', lvT: '跨單元', ic: '🎭', name: '百變造型', sub: '一字多義', en: 'HERO SKINS', time: 15, desc: '同一個字換了造型就換意思！看例句選出該字的意思。' }
@@ -131,6 +132,7 @@ function buildQuestions(u, g) {
     while (i < real.length || j < other.length) { if (i < real.length) out.push(real[i++]); if (j < other.length) out.push(other[j++]); }
     return out;
   }
+  if (g === 'news') return shuffle(u.ls.flatMap(n => (NEWS[n] || []))).map(q => ({ kind: 'news', ...q }));
   if (g === 'order') return shuffle(REVIEW[u.rv].sents).map(s => ({ kind: 'order', ...s }));
   if (g === 'verb') {
     const qs = [];
@@ -154,14 +156,15 @@ function home() {
   stopTimer();
   app.innerHTML = `
   <section class="hero">
-    <div class="kicker">九年級上學期・康軒 BOOK 5・段考前特訓</div>
-    <h1>英雄峽谷<small>段 考 爭 霸 戰</small></h1>
-    <p>九大單元、每單元三階任務，由易到難一路推塔。全部點選作答，不用打字，答對累積金幣衝段位！</p>
+    <div class="kicker">305 班專屬・九上英語・段考前特訓</div>
+    <h1>英雄峽谷</h1>
+    <div class="sub2"><span class="cls">305</span><span>段考爭霸戰</span></div>
+    <p>九大單元、每單元四階任務，由易到難一路推塔。答對累積金幣衝段位！</p>
   </section>
   <div class="card frame">${rankCard()}</div>
   <div class="sec"><h2>選擇戰場</h2><small>每課一單元・每兩課一個 Review</small></div>
   <div class="units">${UNITS.map(u => {
-    const gs = u.rv ? ['vocab', 'grammar', 'fix', 'order', 'passage'] : ['vocab', 'grammar', 'fix'];
+    const gs = u.rv ? ['vocab', 'grammar', 'fix', 'news', 'order', 'passage'] : ['vocab', 'grammar', 'fix', 'news'];
     const st = gs.reduce((s, g) => s + (store.get(bestKey(u.id, g), null)?.stars || 0), 0), mx = gs.length * 3;
     return `<a class="unit ${u.rv ? 'rv' : ''}" href="#/u/${u.id}">
       <span class="stars">${st} / ${mx} ★</span>
@@ -178,6 +181,7 @@ function missionCard(uid, g) {
     if (g === 'vocab') count = vocabFor(u).length + ' 字';
     if (g === 'grammar') count = u.ls.reduce((s, n) => s + BANK[n].grammar.length, 0) + ' 題';
     if (g === 'fix') count = u.ls.reduce((s, n) => s + BANK[n].fix.length, 0) + ' 題';
+    if (g === 'news') count = u.ls.reduce((s, n) => s + (NEWS[n] || []).length, 0) + ' 句';
     if (g === 'order') count = REVIEW[u.rv].sents.length + ' 句・' + REVIEW[u.rv].page;
     if (g === 'passage') count = REVIEW[u.rv].sents.length + ' 句・' + REVIEW[u.rv].page;
   } else count = g === 'verb' ? VERBS.length + ' 個動詞' : POLY.length + ' 題庫';
@@ -203,8 +207,8 @@ function unitView(id) {
     <h2 style="margin:8px 0 4px;font-size:22px">${esc(u.title)}</h2>
     <div class="grammarbox">${esc(u.zh)}<br><b>文法重點：</b>${esc(u.gram)}</div>
   </div>
-  <div class="sec"><h2>三階任務</h2><small>由易到難</small></div>
-  <div class="missions">${missionCard(id, 'vocab')}${missionCard(id, 'grammar')}${missionCard(id, 'fix')}</div>
+  <div class="sec"><h2>四階任務</h2><small>由易到難</small></div>
+  <div class="missions four">${missionCard(id, 'vocab')}${missionCard(id, 'grammar')}${missionCard(id, 'fix')}${missionCard(id, 'news')}</div>
   ${extra}${crossSection()}`;
 }
 
@@ -233,7 +237,7 @@ function bindQuit() { const q = $('#quit'); if (q) q.onclick = () => { stopTimer
 function next() {
   if (G.i >= G.qs.length) return result();
   const q = G.qs[G.i];
-  ({ vocab: showMCQ, grammar: showMCQ, verb3: showMCQ, verbF: showMCQ, poly: showMCQ, fix: showFix, order: showOrder })[q.kind](q);
+  ({ vocab: showMCQ, grammar: showMCQ, verb3: showMCQ, verbF: showMCQ, poly: showMCQ, news: showMCQ, fix: showFix, order: showOrder })[q.kind](q);
 }
 function award(ok, left, total, base = 100) {
   G.done++;
@@ -257,7 +261,7 @@ function showMCQ(q) {
       <div class="center" style="margin-top:6px"><button class="say" data-say="${esc(q.w.en)}">🔊 再聽一次</button></div>`;
     optCls = '';
   } else if (q.kind === 'grammar') {
-    body = `<div class="stem">${esc(q.q).replace(/_{3,}/g, '<span class="blank">？</span>')}</div>`;
+    body = `<div class="stem">${esc(q.q).replace(/_{3,}/g, '<span class="blank"></span>')}</div>`;
   } else if (q.kind === 'verb3') {
     body = `<p class="muted center" style="margin:10px 0 0">這組三態是哪個字？選出中文意思</p>
       <div class="word" style="font-size:clamp(26px,7vw,40px)">${esc(q.v[0])} <span class="muted">–</span> ${esc(q.v[1])} <span class="muted">–</span> ${esc(q.v[2])}</div>
@@ -266,6 +270,12 @@ function showMCQ(q) {
   } else if (q.kind === 'verbF') {
     body = `<div class="word">${esc(q.v[0])}</div><div class="pos">${esc(q.v[3])}</div>
       <p class="center" style="font-size:18px;margin:10px 0 0">請選出 <b class="gold">${q.ask === 1 ? '過去式' : '過去分詞'}</b></p>`;
+  } else if (q.kind === 'news') {
+    body = `<div class="newsrc">📰 <b>${esc(q.outlet)}</b>${q.date ? '・' + esc(q.date) : ''}　<a href="${esc(q.url)}" target="_blank" rel="noopener">${esc(q.title || '原文連結')} ↗</a></div>
+      <div class="stem news">${esc(q.en)}</div>
+      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><button class="say" data-say="${esc(q.en)}">🔊 聽新聞句</button><span class="chip">文法：${esc(q.gz)}</span></div>
+      <p class="muted" style="margin:10px 0 0;font-size:14px">哪一個是正確的中文翻譯？</p>`;
+    optCls = '';
   } else if (q.kind === 'poly') {
     const irr = { light: 'lit', lead: 'led', swing: 'swung', shake: 'shook', grow: 'grew', keep: 'kept', leave: 'left', mean: 'meant', stand: 'stood', fall: 'fell', fly: 'flew', ring: 'rang' };
     const re = new RegExp('\\b(' + q.w + '\\w*|' + q.w.slice(0, -1) + '\\w*' + (irr[q.w] ? '|' + irr[q.w] : '') + ')\\b', 'i');
@@ -289,14 +299,18 @@ function showMCQ(q) {
     app.querySelectorAll('.opts button').forEach((b, i) => { b.disabled = true; if (i === q.a) b.classList.add('right'); else if (i === k) b.classList.add('wrong'); });
     let info = '';
     if (q.kind === 'vocab') info = `<b>${esc(q.w.en)}</b> ${esc(q.w.pos)} ${esc(q.w.zh)}<span class="src">📖 ${esc(q.w.ex)} <button class="say" data-say="${esc(q.w.ex)}">🔊</button></span>`;
-    if (q.kind === 'grammar') info = `${esc(q.tip || '')}<span class="src">出處：${esc(q.src || '')}</span>`;
+    if (q.kind === 'grammar') info = esc(q.tip || '');
     if (q.kind === 'verb3' || q.kind === 'verbF') info = `<b>${esc(q.v[0])} – ${esc(q.v[1])} – ${esc(q.v[2])}</b>　${esc(q.v[3])}`;
     if (q.kind === 'poly') info = `<b>${esc(q.w)}</b> 在這句是「${esc(q.o[q.a])}」`;
+    if (q.kind === 'news') {
+      info = esc(q.tip || '');
+      const st = $('.stem.news'); if (st) st.innerHTML = esc(q.hl).replace(/\[\[(.*?)\]\]/g, '<mark>$1</mark>');
+    }
     $('#fb').innerHTML = `<div class="feedback ${ok ? 'ok' : 'bad'}">${ok ? `✔ 擊殺！+${p} 金幣` : (k < 0 ? '⏰ 時間到！' : '✘ 被反殺了！')}　${info}</div>
       <div class="nextrow"><button class="btn gold" id="nx">${G.i + 1 >= G.qs.length ? '看戰績 ▶' : '下一題 ▶'}</button></div>`;
     if (!ok) G.wrong.push(q);
     const go = () => { clearTimeout(auto); G.i++; next(); };
-    const auto = ok ? setTimeout(go, q.kind === 'grammar' ? 1600 : 1000) : null;
+    const auto = ok ? setTimeout(go, q.kind === 'grammar' ? 1600 : q.kind === 'news' ? 2600 : 1000) : null;
     $('#nx').onclick = go;
   }
 }
@@ -466,6 +480,7 @@ function result() {
     if (q.kind === 'fix') return `<li>${fixParts(q.t).map(p => p.seg == null ? esc(p.t) : p.seg === q.e ? `<s class="bad">${esc(p.t)}</s> <b class="ok">${esc(q.o[q.a])}</b>` : esc(p.t)).join('').replace(/\n/g, ' ')}<div class="zz">${esc(q.tip || '')}</div></li>`;
     if (q.kind === 'order') return `<li>${esc(q.en)}<div class="zz">${esc(q.zh)}</div></li>`;
     if (q.kind === 'verb3' || q.kind === 'verbF') return `<li><b>${esc(q.v[0])} – ${esc(q.v[1])} – ${esc(q.v[2])}</b>　${esc(q.v[3])}</li>`;
+    if (q.kind === 'news') return `<li>${esc(q.en)}<div class="zz">${esc(q.o[q.a])}（${esc(q.outlet)}）</div></li>`;
     if (q.kind === 'poly') return `<li>${esc(q.s)}<div class="zz">${esc(q.w)}：${esc(q.o[q.a])}</div></li>`;
     return '';
   }).join('');

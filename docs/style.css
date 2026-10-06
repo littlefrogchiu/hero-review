@@ -50,10 +50,11 @@ button{font:inherit;cursor:pointer;color:inherit;-webkit-tap-highlight-color:tra
 /* ---- hero ---- */
 .hero{padding:26px 0 6px;text-align:center}
 .hero .kicker{font-size:13px;letter-spacing:4px;color:var(--cyan)}
-.hero h1{font-family:var(--head);font-weight:600;font-size:clamp(46px,12vw,92px);line-height:.88;margin:6px 0 0;letter-spacing:2px;
+.hero h1{font-family:var(--body);font-weight:900;font-size:clamp(46px,12vw,88px);line-height:1.2;padding:.06em .1em 0;margin:6px 0 0;letter-spacing:2px;
   background:linear-gradient(180deg,#fff7d6,var(--gold) 55%,#b8862e);-webkit-background-clip:text;background-clip:text;color:transparent;
   filter:drop-shadow(0 4px 18px rgba(241,199,107,.35))}
-.hero h1 small{display:block;font-size:.42em;letter-spacing:6px;-webkit-text-fill-color:var(--ink);color:var(--ink);margin-top:6px}
+.hero .sub2{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:4px;font-size:clamp(20px,5.4vw,34px);font-weight:900;letter-spacing:6px}
+.hero .cls{font-family:var(--head);font-weight:600;letter-spacing:2px;font-size:1.25em;line-height:1;padding:.12em .35em 0;border-radius:8px;color:#2b1b00;background:linear-gradient(180deg,var(--gold2),var(--gold) 50%,#c99536);box-shadow:0 0 18px rgba(241,199,107,.45)}
 .hero p{color:var(--muted);margin:10px auto 0;max-width:620px;font-size:15px}
 
 /* ---- rank card ---- */
@@ -111,7 +112,7 @@ button{font:inherit;cursor:pointer;color:inherit;-webkit-tap-highlight-color:tra
 .pos{text-align:center;color:var(--cyan);font-size:15px}
 .say{border:1px solid var(--line);background:var(--bg2);border-radius:999px;padding:4px 12px;font-size:13px;color:var(--muted)}
 .stem{font-size:20px;line-height:1.65;margin:12px 0 4px;font-family:Georgia,"Times New Roman",serif;white-space:pre-line}
-.stem .blank{display:inline-block;min-width:70px;border-bottom:2px solid var(--gold);text-align:center;color:var(--gold);font-family:var(--body);font-size:16px}
+.stem .blank{display:inline-block;min-width:80px;border-bottom:2px solid var(--gold);margin:0 3px}
 .opts{display:grid;grid-template-columns:1fr;gap:10px;margin-top:14px}
 @media(min-width:640px){.opts.two{grid-template-columns:1fr 1fr}}
 .opts button{text-align:left;border:1px solid var(--line);background:var(--card2);border-radius:12px;padding:13px 14px;font-size:17px;display:flex;gap:10px;align-items:center;transition:background .12s,border-color .12s}
@@ -196,3 +197,11 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:30px 0 40px}
 .grammarbox{font-size:14px;color:var(--muted)}
 .grammarbox b{color:var(--ink)}
 .gold i,.best i{font-style:normal;color:#3a4670}
+
+@media(min-width:720px){.missions.four{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.missions.four{grid-template-columns:repeat(4,1fr)}}
+.mission.l4 .lv{color:#ff9d3c}
+.mission.l4{border-color:rgba(255,157,60,.45);background:linear-gradient(170deg,#3a2414,#141a3a)}
+.newsrc{margin-top:10px;font-size:13px;color:var(--muted);padding:6px 10px;background:var(--bg2);border-radius:8px;border-left:3px solid #ff9d3c;overflow-wrap:anywhere}
+.newsrc a{color:var(--cyan)}
+.stem mark{background:rgba(255,157,60,.25);color:#ffd2a8;border-bottom:2px solid #ff9d3c;padding:0 2px;border-radius:3px}

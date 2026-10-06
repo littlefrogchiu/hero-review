@@ -1,4 +1,4 @@
-/* 英雄峽谷段考戰 — app */
+/* 305 英語段考複習 — app */
 'use strict';
 const $ = (s, r = document) => r.querySelector(s);
 const app = $('#app');
